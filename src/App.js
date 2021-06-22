@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Homepage from "./views/homepage";
+import ArtistScreen from "./views/ArtistScreen";
+function App(props) {
+	return (
+		<Router>
+			<img
+				src="https://f4.bcbits.com/img/0021114911_10.jpg"
+				alt=""
+				className="logo"
+			/>
+			<Header />
+			<div className="App">
+				<Route path="/" component={Homepage} exact />
+				<Route path="/artist/:id" component={ArtistScreen} exact />
+			</div>
+		</Router>
+	);
 }
 
 export default App;

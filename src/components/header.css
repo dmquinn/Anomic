@@ -1,0 +1,14 @@
+.navbar {
+  background-color: #f3b3d6 !important;
+}
+
+.navbar a {
+  font-family: fantasy;
+  font-size: 40px;
+  color: black !important;
+}
+
+.navbar a:hover {
+  color: white !important;
+}
+/*# sourceMappingURL=header.css.map */

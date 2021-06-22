@@ -1,0 +1,7 @@
+.artistPageImg {
+  height: 400px;
+  width: 50vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=artistScreen.css.map */
