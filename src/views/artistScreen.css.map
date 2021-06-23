@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,cAAc,CAAC;EACd,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,KAAK;CACjB",
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACd,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,KAAK;CACjB;;AACD,AAAA,MAAM,CAAC;EACN,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;CACX",
     "sources": [
         "artistScreen.scss"
     ],

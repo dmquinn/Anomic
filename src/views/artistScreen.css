@@ -4,4 +4,9 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+iframe {
+  height: 400px;
+  width: 100%;
+}
 /*# sourceMappingURL=artistScreen.css.map */

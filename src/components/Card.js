@@ -7,7 +7,7 @@ const Card = (props) => {
 	return (
 		<>
 			<div
-				className="card"
+				className="card mt-5"
 				onMouseEnter={() => setHover(true)}
 				onMouseLeave={() => setHover(false)}
 			>
