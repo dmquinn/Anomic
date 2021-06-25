@@ -8,16 +8,41 @@ function ArtistScreen(props) {
 	return (
 		<>
 			{!!artistDetails && (
-				<div className="row mt-5">
-					<div className="col-lg-6">
+				<>
+					<div>
 						<img
 							className="artistPageImg"
 							src={artistDetails.imgTwo}
 							alt=""
-						></img>
-						<h1>{artistDetails.name}</h1>
+						/>
+						<div className="socialMediaColumn">
+							<a href={artistDetails.facebook}>
+								<i className="fab fa-facebook-f p-2"></i>
+							</a>
+							<a href={artistDetails.instagram}>
+								<i class="fab fa-instagram p-2"></i>
+							</a>
+							<a href={artistDetails.bandcamp}>
+								<i class="fab fa-bandcamp p-2"></i>
+							</a>
+							<a href={artistDetails.youtube}>
+								<i class="fab fa-youtube p-2"></i>
+							</a>
+						</div>
+						<h1 className="artistScreenName p-2">
+							{artistDetails.name}
+						</h1>
 					</div>
-					<div className="col-lg-6">
+					<div className="d-flex justify-content-center mt-5">
+						<div className="col-lg-5 mt-5 bio">
+							{artistDetails.bio}
+						</div>
+					</div>
+					<div className="d-flex justify-content-center mt-5">
+						<h1>RELEASES</h1>
+					</div>
+
+					<div className="">
 						<iframe
 							width="560"
 							height="315"
@@ -28,7 +53,7 @@ function ArtistScreen(props) {
 							allowfullscreen
 						></iframe>
 					</div>
-				</div>
+				</>
 			)}
 		</>
 	);

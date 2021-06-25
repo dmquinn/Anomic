@@ -1,27 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Card.css";
 
 const Card = (props) => {
-	const [hover, setHover] = useState(false);
-
 	return (
-		<>
-			<div
-				className="card mt-5"
-				onMouseEnter={() => setHover(true)}
-				onMouseLeave={() => setHover(false)}
-			>
-				<img alt="" loading="lazy" src={props.imgOne}></img>
-				{hover && (
-					<>
-						<div className="cardText">
-							<h4>{props.name}</h4>
-							<h4 className="title">{props.title}</h4>
-						</div>
-					</>
-				)}
+		<div className="card mt-5">
+			<img alt="" loading="lazy" src={props.imgOne}></img>
+
+			<div className="d-flex justify-content-center mt-4 cardText">
+				<h6>{props.name}</h6>
+				<h4 className="title">{props.title}</h4>
 			</div>
-		</>
+		</div>
 	);
 };
 

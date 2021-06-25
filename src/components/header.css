@@ -1,9 +1,9 @@
 .navbar {
-  background-color: #f3b3d6 !important;
+  background-color: #ff97e0 !important;
 }
 
 .navbar a {
-  font-family: fantasy;
+  font-family: "Economica", sans-serif;
   font-size: 40px;
   color: #1b1b1b !important;
 }

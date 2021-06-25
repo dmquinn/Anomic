@@ -18,8 +18,25 @@ function homepage(props) {
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 					allowfullscreen
 				></iframe>
-				<h1>Our Artists</h1>
+				<div className="d-flex justify-content-center">
+					<a href="https://www.facebook.com/anomicrecords/">
+						<i className="fab fa-facebook-f p-5"></i>
+					</a>
+					<a href="https://www.instagram.com/anomicrecords/?hl=en">
+						<i class="fab fa-instagram p-5"></i>
+					</a>
+					<a href="https://anomicrecords.bandcamp.com/">
+						<i class="fab fa-bandcamp p-5"></i>
+					</a>
+					<a href="https://www.youtube.com/channel/UCtD0HCtxYqZyvMoR3tavQYA">
+						<i class="fab fa-youtube p-5"></i>
+					</a>
+				</div>
+				<div className="d-flex justify-content-center">
+					<h1 className="mt-5 ourArtists">Our Artists</h1>
+				</div>
 				<List artists={artists}></List>
+				<br />
 			</div>
 		</div>
 	);
