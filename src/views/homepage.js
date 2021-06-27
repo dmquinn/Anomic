@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import List from "../components/List";
+import ArtistList from "../components/ArtistList";
 import artists from "../artists";
 import "./homepage.css";
 
@@ -35,7 +35,7 @@ function homepage(props) {
 				<div className="d-flex justify-content-center">
 					<h1 className="mt-5 ourArtists">Our Artists</h1>
 				</div>
-				<List artists={artists}></List>
+				<ArtistList artists={artists}></ArtistList>
 				<br />
 			</div>
 		</div>

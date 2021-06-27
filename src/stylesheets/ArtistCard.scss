@@ -9,10 +9,12 @@
 	text-decoration: underline pink !important;
 	color: black;
 	img {
-		height: 51vh;
+		height: 80%;
+		width: 80%;
 		object-fit: cover;
 		border-radius: 50%;
 		transition: 0.5s;
+		box-shadow: 9px 0px 20px 5px rgba(255, 34, 34, 0.164);
 	}
 
 	&:hover > img {

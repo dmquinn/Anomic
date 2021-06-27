@@ -11,12 +11,15 @@
 }
 
 .card img {
-  height: 51vh;
+  height: 80%;
+  width: 80%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -webkit-box-shadow: 9px 0px 20px 5px rgba(255, 34, 34, 0.164);
+          box-shadow: 9px 0px 20px 5px rgba(255, 34, 34, 0.164);
 }
 
 .card:hover > img {
@@ -24,4 +27,4 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-/*# sourceMappingURL=Card.css.map */
+/*# sourceMappingURL=ArtistCard.css.map */

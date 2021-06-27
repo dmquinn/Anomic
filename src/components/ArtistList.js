@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Card from "./Card";
+import ArtistCard from "./ArtistCard";
 import Loader from "./Loader";
-import "./List.css";
+import "../stylesheets/ArtistList.css";
 // prepare for deployment environment variable
 
 const List = ({ artists }) => {
@@ -18,12 +18,12 @@ const List = ({ artists }) => {
 									state: artist,
 								}}
 							>
-								<Card
+								<ArtistCard
 									artist={artist}
 									key={artist.id}
 									imgOne={artist.imgOne}
 									name={artist.name}
-								></Card>
+								></ArtistCard>
 							</Link>
 						</div>
 					);

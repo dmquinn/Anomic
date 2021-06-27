@@ -16,7 +16,7 @@ const artists = [
 		id: 2,
 		name: "Haus Band",
 		tag: "site",
-		imgOne: "https://lh3.googleusercontent.com/proxy/ephIAokFeacRF4NURkdhrvoBatj2L_9xccjiQCV4GG0Xv-0GobPx9kIzWnFTQwiUuLJyQe8jxgDndhS3ryhDd2YKE5XdWtK6ASIjGBJmKt3cygSERmwQLXfpa88",
+		imgOne: "https://f4.bcbits.com/img/a4029138062_16.jpg",
 		imgTwo: "https://townsquare.media/site/838/files/2021/05/hausband.jpeg?w=980&q=75",
 		bio: "It’s been an interesting few months for Eddie Argos, illustrious front man of sardonic indie art pioneers Art Brut. In echoes of that seminal hit, he’s only gone and ‘Formed A Band’ look at him, he’s formed a band!…a Bob Dylan covers band at that – with fellow Berlin artist’s Olga Karatzioti-B. and Leonard Kaage of Errorr and The Underground Youth fame. “I’ve always wanted to make a Dylan covers album,” says an enthusiastic Argos, “but the opportunity really came up when, during Lockdown, I heard my neighbours practicing their songs through the floor, and thought to myself ‘they sound like they need a singing partner‘. I’d heard them practicing Pixies the week before so I knew they were awesome dudes. We’d also been looking after each other‘s cats.”",
 		embed: "https://www.youtube.com/embed/UmUO503RdmE",

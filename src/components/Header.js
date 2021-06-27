@@ -1,5 +1,5 @@
 import React from "react";
-import "./header.css";
+import "../stylesheets/header.css";
 
 function Header() {
 	return (
@@ -24,7 +24,7 @@ function Header() {
 							</a>
 						</li>
 						<li className="nav-item offset-3">
-							<a className="nav-link" href="#">
+							<a className="nav-link" href="/releases">
 								RELEASES
 							</a>
 						</li>

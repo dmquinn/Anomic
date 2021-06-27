@@ -1,9 +1,21 @@
 import React, { useEffect } from "react";
 import { withRouter } from "react-router-dom";
 import "./artistScreen.css";
+import releases from "../releases";
 
 function ArtistScreen(props) {
+	useEffect(() => {
+		console.log("r", releases);
+	});
 	let artistDetails = props.history.location.state;
+	{
+		releases.map((release, i) => {
+			if (releases[i] == artistDetails.name) {
+				const match = releases[i];
+				return match;
+			}
+		});
+	}
 	//
 	return (
 		<>
@@ -41,6 +53,7 @@ function ArtistScreen(props) {
 					<div className="d-flex justify-content-center mt-5">
 						<h1>RELEASES</h1>
 					</div>
+					{/* {artistDetails.name==releases.artist} */}
 
 					<div className="">
 						<iframe
