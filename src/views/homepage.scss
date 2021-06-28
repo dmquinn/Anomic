@@ -27,7 +27,13 @@ i {
 	transition: 0.2s;
 
 	&:hover {
-		color: rgba(255, 192, 229, 0.795);
+		color: rgba(32, 32, 32, 0.795);
 		transition: 0.2s;
+	}
+}
+@media (max-width: 768px) {
+	iframe {
+		padding: 0;
+		height: 400px;
 	}
 }

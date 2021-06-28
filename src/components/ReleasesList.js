@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ReleasesCard from "./ReleasesCard";
-import Loader from "./Loader";
+import ReleasesCard from "../components/ReleasesCard";
+import Loader from "../components/Loader";
 import "../stylesheets/ArtistList.css";
 
 const List = ({ releases }) => {

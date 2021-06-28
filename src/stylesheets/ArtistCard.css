@@ -18,8 +18,8 @@
   border-radius: 50%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 9px 0px 20px 5px rgba(255, 34, 34, 0.164);
-          box-shadow: 9px 0px 20px 5px rgba(255, 34, 34, 0.164);
+  -webkit-box-shadow: 9px 0px 20px 5px rgba(0, 0, 0, 0.164);
+          box-shadow: 9px 0px 20px 5px rgba(0, 0, 0, 0.164);
 }
 
 .card:hover > img {

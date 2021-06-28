@@ -8,10 +8,10 @@ import "../stylesheets/ArtistList.css";
 const List = ({ artists }) => {
 	return (
 		<div className="container mt-5">
-			<div className="row list">
+			<div className="row list justify-content-center">
 				{artists.map((artist, i) => {
 					return (
-						<div className="cardContainer col-lg-4">
+						<div className="col-lg-4">
 							<Link
 								to={{
 									pathname: `artist/${artist.name}`,

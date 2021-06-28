@@ -8,7 +8,7 @@ function Header() {
 				<button
 					className="navbar-toggler"
 					type="button"
-					data-toggle="collapse"
+					// data-toggle="collapse"
 					data-target="#navbarNav"
 					aria-controls="navbarNav"
 					aria-expanded="false"
@@ -16,9 +16,9 @@ function Header() {
 				>
 					<span className="navbar-toggler-icon"></span>
 				</button>
-				<div className="collapse navbar-collapse" id="navbarNav">
-					<div className="container w-100 justify-content-center">
-						<ul className="navbar-nav">
+				<div className=" navbar-collapse" id="navbarNav">
+					<div className="container ">
+						<ul className="navbar-nav w-100 nav-fill">
 							<li className="nav-item active">
 								<a className="nav-link " href="/">
 									ARTISTS
