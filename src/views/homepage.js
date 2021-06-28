@@ -6,7 +6,7 @@ import "./homepage.css";
 
 function homepage(props) {
 	return (
-		<div>
+		<div className="section">
 			<div className="contianer">
 				<iframe
 					width="560"

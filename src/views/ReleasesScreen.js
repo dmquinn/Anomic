@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReleasesList from "../components/ReleasesList";
 import releases from "../releases";
 
-function Releases() {
+function Releases(props) {
+	useEffect(() => {
+		console.log(props);
+	});
 	return (
 		<div>
 			<ReleasesList releases={releases} />

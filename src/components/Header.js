@@ -17,28 +17,30 @@ function Header() {
 					<span className="navbar-toggler-icon"></span>
 				</button>
 				<div className="collapse navbar-collapse" id="navbarNav">
-					<ul className="navbar-nav offset-2">
-						<li className="nav-item active">
-							<a className="nav-link " href="/">
-								ARTISTS
-							</a>
-						</li>
-						<li className="nav-item offset-3">
-							<a className="nav-link" href="/releases">
-								RELEASES
-							</a>
-						</li>
-						<li className="nav-item offset-3">
-							<a className="nav-link" href="#">
-								EVENTS
-							</a>
-						</li>
-						<li className="nav-item offset-3">
-							<a className="nav-link disabled" href="#">
-								ABOUT
-							</a>
-						</li>
-					</ul>
+					<div className="container w-100 justify-content-center">
+						<ul className="navbar-nav">
+							<li className="nav-item active">
+								<a className="nav-link " href="/">
+									ARTISTS
+								</a>
+							</li>
+							<li className="nav-item">
+								<a className="nav-link" href="/releases">
+									RELEASES
+								</a>
+							</li>
+							<li className="nav-item">
+								<a className="nav-link" href="#">
+									EVENTS
+								</a>
+							</li>
+							<li className="nav-item">
+								<a className="nav-link" href="#">
+									ABOUT
+								</a>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</nav>
 		</header>

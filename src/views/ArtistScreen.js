@@ -5,17 +5,16 @@ import releases from "../releases";
 
 function ArtistScreen(props) {
 	useEffect(() => {
-		console.log("r", releases);
+		releases.map((release, i) => {
+			release.artist === artistDetails.name
+				? console.log("wah", release.artist)
+				: console.log("waaah");
+			match = release.artist;
+		});
 	});
 	let artistDetails = props.history.location.state;
-	{
-		releases.map((release, i) => {
-			if (releases[i] == artistDetails.name) {
-				const match = releases[i];
-				return match;
-			}
-		});
-	}
+	let match = "";
+
 	//
 	return (
 		<>
@@ -53,7 +52,11 @@ function ArtistScreen(props) {
 					<div className="d-flex justify-content-center mt-5">
 						<h1>RELEASES</h1>
 					</div>
-					{/* {artistDetails.name==releases.artist} */}
+					{releases.map((release, i) => {
+						release.artist === artistDetails.name && (
+							<h1 className="">BIGGONEEE{match}</h1>
+						);
+					})}
 
 					<div className="">
 						<iframe
