@@ -1,7 +1,5 @@
 .card {
 	position: relative;
-	// height: 300px;
-	// overflow: hidden;
 	border: none;
 	animation: fade 0.4s linear;
 	letter-spacing: 2px;
@@ -18,7 +16,7 @@
 	}
 
 	&:hover > img {
-		border-radius: 0%;
+		border-radius: 5%;
 		transition: 0.5s;
 	}
 }

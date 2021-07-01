@@ -6,6 +6,10 @@ body {
 	font-family: fantasy;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	/* background-color: rgb(250, 70, 190); */
+}
+.logo {
+	mix-blend-mode: multiply;
 }
 .logo:hover {
 	animation: shake 0.5s;

@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import ArtistList from "../components/ArtistList";
 import artists from "../artists";
-import "./homepage.css";
+import "../stylesheets/homepage.css";
 
 function homepage(props) {
 	return (

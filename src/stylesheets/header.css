@@ -1,11 +1,11 @@
 .navbar {
-  background-color: #ff97e0 !important;
+  background-color: #da5cb4 !important;
 }
 
 .navbar a {
   font-family: "Economica", sans-serif;
   font-size: 2em;
-  color: #1b1b1b !important;
+  color: white !important;
 }
 
 .navbar a:hover {

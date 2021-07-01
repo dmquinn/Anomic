@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { withRouter } from "react-router-dom";
-import "./artistScreen.css";
+import "../stylesheets/artistScreen.css";
 import releases from "../releases";
 
 function ArtistScreen(props) {
