@@ -1,49 +1,36 @@
 import React from "react";
+import {
+	Nav,
+	Navbar,
+	NavDropdown,
+	Button,
+	Form,
+	FormControl,
+} from "react-bootstrap";
+import Logo from "../logo.svg";
 import "../stylesheets/Header.css";
 
 function Header() {
 	return (
-		<header>
-			<nav className="navbar navbar-expand-lg">
-				<button
-					className="navbar-toggler"
-					type="button"
-					// data-toggle="collapse"
-					data-target="#navbarNav"
-					aria-controls="navbarNav"
-					aria-expanded="false"
-					aria-label="Toggle navigation"
-				>
-					<span className="navbar-toggler-icon"></span>
-				</button>
-				<div className=" navbar-collapse" id="navbarNav">
-					<div className="container ">
-						<ul className="navbar-nav w-100 nav-fill">
-							<li className="nav-item active">
-								<a className="nav-link " href="/">
-									ARTISTS
-								</a>
-							</li>
-							<li className="nav-item">
-								<a className="nav-link" href="/releases">
-									RELEASES
-								</a>
-							</li>
-							<li className="nav-item">
-								<a className="nav-link" href="#">
-									EVENTS
-								</a>
-							</li>
-							<li className="nav-item">
-								<a className="nav-link" href="#">
-									ABOUT
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</header>
+		<>
+			<a href="/">
+				<img src={Logo} alt="" className="logo" />
+			</a>
+			<header>
+				<Navbar expand="lg" className="navLinks">
+					<Navbar.Brand href="/"></Navbar.Brand>
+					<Navbar.Toggle aria-controls="basic-navbar-nav" />
+					<Navbar.Collapse id="basic-navbar-nav" className="ml-auto">
+						<Nav className="ml-auto">
+							<Nav.Link href="/artists">Artists</Nav.Link>
+							<Nav.Link href="/releases">Releases</Nav.Link>
+							<Nav.Link href="/events">Events</Nav.Link>
+							<Nav.Link href="/about">About</Nav.Link>
+						</Nav>
+					</Navbar.Collapse>
+				</Navbar>
+			</header>
+		</>
 	);
 }
 

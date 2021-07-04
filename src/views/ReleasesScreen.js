@@ -7,7 +7,10 @@ function Releases(props) {
 		console.log(props);
 	});
 	return (
-		<div>
+		<div className="releasesScreen">
+			<div className="d-flex justify-content-center">
+				<h1 className="mt-5 ourArtists">Releases</h1>
+			</div>
 			<ReleasesList releases={releases} />
 		</div>
 	);

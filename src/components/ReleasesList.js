@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import ReleasesCard from "../components/ReleasesCard";
 import Loader from "../components/Loader";
-import "../stylesheets/ArtistList.css";
+import "../stylesheets/ReleasesList.css";
 
 const List = ({ releases }) => {
 	return (
 		<div className="container mt-5">
-			<div className="row list">
+			<div className="row releasesList">
 				{releases.map((release, i) => {
 					return (
 						<div className="cardContainer col-lg-4">

@@ -1,14 +1,36 @@
-.navbar {
-  background-color: #da5cb4 !important;
+header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 3;
+  text-shadow: 2px 2px 2px rgba(255, 0, 0, 0.589);
 }
 
-.navbar a {
-  font-family: "Economica", sans-serif;
-  font-size: 2em;
-  color: white !important;
+header .navbar {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  background-color: rgba(119, 34, 34, 0) !important;
+  border-bottom: 2px solid black !important;
 }
 
-.navbar a:hover {
+header .navbar .nav-link {
   color: white !important;
+  font-size: 2rem;
+  margin-left: 20px;
+}
+
+header .navbar .nav-link:hover {
+  color: black;
+}
+
+.logo {
+  mix-blend-mode: multiply;
+  position: absolute;
+  z-index: 3;
+  left: 10px;
+  top: 0px;
+  height: 250px;
+  width: auto;
 }
 /*# sourceMappingURL=header.css.map */

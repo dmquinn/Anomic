@@ -1,0 +1,43 @@
+.carousel {
+  height: 100vh;
+}
+
+.carousel .carousel-item img {
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
+  background-blend-mode: multiply;
+}
+
+.carousel .thumbs {
+  visibility: hidden;
+}
+
+.carousel .carousel-item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.589)), to(transparent));
+  background: linear-gradient(rgba(0, 0, 0, 0.589), transparent);
+}
+
+.carousel .legend {
+  background-color: rgba(0, 0, 0, 0) !important;
+  color: white !important;
+  font-size: 2rem !important;
+  position: absolute !important;
+  bottom: 30% !important;
+  text-shadow: 2px 2px 2px rgba(255, 0, 0, 0.589);
+}
+
+.carousel .carousel-status {
+  visibility: hidden;
+}
+/*# sourceMappingURL=Carousel.css.map */

@@ -2,11 +2,13 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import ArtistList from "../components/ArtistList";
 import artists from "../artists";
-import "../stylesheets/homepage.css";
+import Carousel from "../components/Carousel";
+import "../stylesheets/Homepage.css";
 
 function homepage(props) {
 	return (
 		<div className="section">
+			<Carousel />
 			<div className="contianer">
 				<iframe
 					src="https://www.youtube.com/embed/nUzTdtJLGuI?modestbranding=1"
