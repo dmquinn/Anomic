@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Homepage from "./views/Homepage";
 import ArtistScreen from "./views/ArtistScreen";
+import ArtistsScreen from "./views/ArtistsScreen";
 import ReleasesScreen from "./views/ReleasesScreen";
 function App(props) {
 	return (
@@ -13,6 +14,7 @@ function App(props) {
 			<div className="App" style={{ position: "relative" }}>
 				<Route path="/" component={Homepage} exact />
 				<Route path="/releases" component={ReleasesScreen} exact />
+				<Route path="/artists" component={ArtistsScreen} exact />
 				<Route path="/artist/:id" component={ArtistScreen} exact />
 			</div>
 			<Footer />

@@ -6,13 +6,14 @@
 	font-family: serif;
 	text-decoration: underline pink !important;
 	color: black;
+	border: 1px solid rgba(128, 128, 128, 0.171);
 	img {
-		height: 80%;
-		width: 80%;
+		height: 100%;
+		width: 100%;
 		object-fit: cover;
-		border-radius: 50%;
+		// border: 4px solid rgba(255, 0, 0, 0.589);
+		// border-radius: 50%;
 		transition: 0.5s;
-		box-shadow: 9px 0px 20px 5px rgba(0, 0, 0, 0.164);
 	}
 
 	&:hover > img {

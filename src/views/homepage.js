@@ -11,13 +11,14 @@ function homepage(props) {
 			<Carousel />
 			<div className="contianer">
 				<iframe
-					src="https://www.youtube.com/embed/nUzTdtJLGuI?modestbranding=1"
+					src="https://www.youtube.com/embed/nUzTdtJLGuI?modestbranding=1&rel=0"
 					title="YouTube video player"
 					frameborder="0"
 					autoplay="1"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 					allowfullscreen
 				></iframe>
+
 				<div className="d-flex justify-content-center">
 					<a href="https://www.facebook.com/anomicrecords/">
 						<i className="fab fa-facebook-f p-lg-5"></i>

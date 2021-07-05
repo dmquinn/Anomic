@@ -11,7 +11,7 @@ const List = ({ artists }) => {
 			<div className="row list justify-content-center">
 				{artists.map((artist, i) => {
 					return (
-						<div className="col-lg-4">
+						<div className="col-lg-4 no-gutters">
 							<Link
 								to={{
 									pathname: `artist/${artist.name}`,

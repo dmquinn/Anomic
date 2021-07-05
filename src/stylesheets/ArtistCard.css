@@ -8,18 +8,16 @@
   -webkit-text-decoration: underline pink !important;
           text-decoration: underline pink !important;
   color: black;
+  border: 1px solid rgba(128, 128, 128, 0.171);
 }
 
 .card img {
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 50%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 9px 0px 20px 5px rgba(0, 0, 0, 0.164);
-          box-shadow: 9px 0px 20px 5px rgba(0, 0, 0, 0.164);
 }
 
 .card:hover > img {

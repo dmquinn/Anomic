@@ -10,7 +10,6 @@ header {
 		top: 0px;
 		right: 20px;
 		background-color: rgba(119, 34, 34, 0) !important;
-		border-bottom: 2px solid black !important;
 
 		.nav-link {
 			color: white !important;
@@ -23,11 +22,13 @@ header {
 	}
 }
 .logo {
-	mix-blend-mode: multiply;
+	// mix-blend-mode: multiply;
+	opacity: 80%;
 	position: absolute;
 	z-index: 3;
 	left: 10px;
 	top: 0px;
-	height: 250px;
+	height: 200px;
+	transform: rotate(-9deg);
 	width: auto;
 }
