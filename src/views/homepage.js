@@ -4,7 +4,7 @@ import ArtistList from "../components/ArtistList";
 import artists from "../artists";
 import Carousel from "../components/Carousel";
 import "../stylesheets/Homepage.css";
-
+//test
 function Homepage(props) {
 	return (
 		<div className="section">

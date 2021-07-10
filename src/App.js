@@ -13,13 +13,14 @@ function App(props) {
 			</div>
 			<div className="App" style={{ position: "relative" }}>
 				<Route path="/" component={Homepage} exact />
-				<Route path="/releases" component={ReleasesScreen} exact />
-				<Route path="/artists" component={ArtistsScreen} exact />
+				<Route path="/releases" component={ReleasesScreen} />
+				<Route path="/artists" component={ArtistsScreen} />
 				<Route path="/artist/:id" component={ArtistScreen} exact />
 			</div>
-			<Footer />
+			<Footer /> 
 		</Router>
 	);
 }
+//test
 
 export default App;

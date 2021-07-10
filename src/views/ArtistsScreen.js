@@ -3,7 +3,7 @@ import ArtistList from "../components/ArtistList";
 import artists from "../artists";
 import "../stylesheets/Homepage.css";
 
-function homepage(props) {
+function ArtistScreen(props) {
 	return (
 		<div className="section">
 			<div className="contianer">
@@ -26,5 +26,5 @@ function homepage(props) {
 		</div>
 	);
 }
-
-export default homepage;
+//test
+export default ArtistScreen;
