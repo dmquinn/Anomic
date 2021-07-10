@@ -41,7 +41,7 @@ function Homepage(props) {
 				</div>
 				<ArtistList artists={artists}></ArtistList>
 				<br />
-			</div>
+			</div> 
 		</div>
 	);
 }
