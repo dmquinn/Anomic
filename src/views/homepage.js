@@ -5,7 +5,7 @@ import artists from "../artists";
 import Carousel from "../components/Carousel";
 import "../stylesheets/Homepage.css";
 
-function homepage(props) {
+function Homepage(props) {
 	return (
 		<div className="section">
 			<Carousel />
@@ -46,4 +46,4 @@ function homepage(props) {
 	);
 }
 
-export default homepage;
+export default Homepage;
