@@ -10,6 +10,9 @@ function homepage(props) {
 		<div className="section">
 			<Carousel />
 			<div className="contianer">
+				<div className="d-flex offset-lg-1">
+					<h1 className="mt-5 ourArtists">Watch Me</h1>
+				</div>
 				<iframe
 					src="https://www.youtube.com/embed/nUzTdtJLGuI?modestbranding=1&rel=0"
 					title="YouTube video player"

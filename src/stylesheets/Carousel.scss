@@ -11,7 +11,7 @@
 	.thumbs {
 		visibility: hidden;
 	}
-	.carousel-item:after {
+	.carousel:after {
 		content: "";
 		display: block;
 		position: absolute;
@@ -19,7 +19,7 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background: linear-gradient(rgba(0, 0, 0, 0.589), transparent);
+		background: linear-gradient(rgba(0, 0, 0, 0.678), transparent);
 	}
 	.legend {
 		background-color: rgba(0, 0, 0, 0) !important;

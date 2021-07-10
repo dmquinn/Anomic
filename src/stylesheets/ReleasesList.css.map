@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,aAAa,CAAC;EACb,QAAQ,EAAE,QAAQ;EAClB,UAAU,EAAE,KAAK;CACjB",
+    "mappings": "",
     "sources": [
         "ReleasesList.scss"
     ],

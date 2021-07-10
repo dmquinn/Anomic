@@ -17,7 +17,7 @@
   visibility: hidden;
 }
 
-.carousel .carousel-item:after {
+.carousel .carousel:after {
   content: "";
   display: block;
   position: absolute;
@@ -25,8 +25,8 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.589)), to(transparent));
-  background: linear-gradient(rgba(0, 0, 0, 0.589), transparent);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.678)), to(transparent));
+  background: linear-gradient(rgba(0, 0, 0, 0.678), transparent);
 }
 
 .carousel .legend {

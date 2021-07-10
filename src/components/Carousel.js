@@ -12,14 +12,13 @@ function Slides() {
 					infiniteLoop
 					interval="5000"
 					transitionTime="1000"
-				>
+				><div>
+						<img src="https://www.psychedelicbabymag.com/wp-content/uploads/2020/09/Niko-Novak-1.jpg" />
+						<p className="legend">Niko Novak</p>
+					</div>
 					<div>
 						<img src="https://post-punk.com/wp-content/uploads/2020/06/errorr_presspicture3-scaled.jpg" />
 						<p className="legend">Errorr</p>
-					</div>
-					<div>
-						<img src="https://www.periskop-berlin.org/wp-content/uploads/2019/11/NIKO-NOVAK-1024x613.jpg" />
-						<p className="legend">Niko Novak</p>
 					</div>
 					<div>
 						<img src="https://post-punk.com/wp-content/uploads/2021/03/CM_PROMO_HEADER.png" />
