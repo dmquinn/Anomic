@@ -1,23 +1,18 @@
 .artistPageImg {
+	top: 50px;
 	height: 400px;
 	width: 100%;
 	object-fit: cover;
 }
-.artistScreenName {
-	position: absolute;
+.boxedText {
 	background-color: rgba(255, 192, 229, 0.795);
 	padding: 20px;
 	clip-path: polygon(0 1%, 100% 0, 100% 80%, 75% 100%, 0 100%, 0% 50%);
-	bottom: 0px;
-	left: 50px;
 }
-.socialMediaColumn {
-	position: absolute;
-	color: rgba(255, 192, 229, 0.795);
-	bottom: 100px;
+.socialMediaRow {
+	position: relative;
+	color: rgb(253, 211, 235);
 	left: 10px;
-	display: flex;
-	flex-direction: column;
 }
 .bio {
 	border-top: 1px solid rgb(199, 199, 199);

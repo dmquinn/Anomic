@@ -1,9 +1,16 @@
-.carousel {
+.carouselContainer {
+  height: 100vh;
+  width: 100vw;
+}
+
+.carouselContainer .carousel {
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100vh;
   overflow: hidden;
 }
 
-.carousel .carousel-item img {
+.carouselContainer .carousel .carousel-item img {
   width: 100vw;
   height: 100vh;
   -o-object-fit: cover;
@@ -13,11 +20,17 @@
   background-blend-mode: multiply;
 }
 
-.carousel .thumbs {
+.carouselContainer .carousel button {
+  height: 0;
   visibility: hidden;
 }
 
-.carousel .carousel:after {
+.carouselContainer .carousel .thumbs {
+  visibility: hidden;
+}
+
+.carouselContainer .carousel .carousel:after {
+  min-height: 100%;
   content: "";
   display: block;
   position: absolute;
@@ -29,7 +42,7 @@
   background: linear-gradient(rgba(0, 0, 0, 0.678), transparent);
 }
 
-.carousel .legend {
+.carouselContainer .carousel .legend {
   background-color: rgba(0, 0, 0, 0) !important;
   color: white !important;
   font-size: 2rem !important;
@@ -38,7 +51,7 @@
   text-shadow: 2px 2px 2px rgba(255, 0, 0, 0.589);
 }
 
-.carousel .carousel-status {
+.carouselContainer .carousel .carousel-status {
   visibility: hidden;
 }
 /*# sourceMappingURL=Carousel.css.map */

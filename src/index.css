@@ -3,23 +3,21 @@
 }
 body {
 	margin: 0;
-	font-family: fantasy;
+	background-color: rgb(230, 230, 230);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	overflow-x: hidden;
 	overflow-y: visible;
-	/* color: white; */
-	/* background-color: rgb(31, 31, 31); */
 }
 
 .logo:hover {
+	color: rgb(255, 224, 251);
 	animation: shake 0.5s;
 	animation-iteration-count: infinite;
 }
 
 @keyframes shake {
 	0% {
-		
 		transform: translate(1px, 1px) rotate(0deg);
 	}
 	10% {

@@ -16,7 +16,7 @@ header {
 			font-size: 2rem;
 			margin-left: 20px;
 			&:hover {
-				color: black;
+				color: rgb(255, 215, 215) !important;
 			}
 		}
 	}
@@ -27,8 +27,9 @@ header {
 	position: absolute;
 	z-index: 3;
 	left: 10px;
-	top: 0px;
+	top: 10px;
 	height: 200px;
-	transform: rotate(-9deg);
+	transform: rotate(-7deg);
+	transition: 0.5s;
 	width: auto;
 }

@@ -1,14 +1,15 @@
 .card {
   position: relative;
   border: none;
+  width: 100%;
   -webkit-animation: fade 0.4s linear;
           animation: fade 0.4s linear;
   letter-spacing: 2px;
   font-family: serif;
+  border-radius: 0;
   -webkit-text-decoration: underline pink !important;
           text-decoration: underline pink !important;
   color: black;
-  border: 1px solid rgba(128, 128, 128, 0.171);
 }
 
 .card img {

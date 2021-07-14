@@ -1,32 +1,22 @@
 .artistPageImg {
+  top: 50px;
   height: 400px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.artistScreenName {
-  position: absolute;
+.boxedText {
   background-color: rgba(255, 192, 229, 0.795);
   padding: 20px;
   -webkit-clip-path: polygon(0 1%, 100% 0, 100% 80%, 75% 100%, 0 100%, 0% 50%);
           clip-path: polygon(0 1%, 100% 0, 100% 80%, 75% 100%, 0 100%, 0% 50%);
-  bottom: 0px;
-  left: 50px;
 }
 
-.socialMediaColumn {
-  position: absolute;
-  color: rgba(255, 192, 229, 0.795);
-  bottom: 100px;
+.socialMediaRow {
+  position: relative;
+  color: #fdd3eb;
   left: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .bio {

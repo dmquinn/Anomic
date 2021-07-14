@@ -30,7 +30,7 @@ const artists = [
 		name: "San Marino",
 		tag: "site",
 		imgOne: "https://f4.bcbits.com/img/a0551211661_2.jpg",
-		imgTwo: "https://f4.bcbits.com/img/a1027387481_16.jpg",
+		imgTwo: "https://www.psychedelicbabymag.com/wp-content/uploads/2021/02/San-Marino.jpg",
 		bio: "Errorr, is a band led by Swedish multi-instrumentalist, musician, and producer Leonard Kaage. The band stylistically combines a wide range of rock-genres in their music but plays first and foremost both noise and punk rock.Together, this three-piece creates a wall of sound with vigorous drumming, fuzz-drenched bass, and massive sounding guitars. The songs are straightforward and direct but never seem to be predictable.",
 		embed: "https://www.youtube.com/embed/B2Y2lsuyfSY",
 		facebook: "",

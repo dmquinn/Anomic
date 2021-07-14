@@ -3,8 +3,11 @@ body {
           box-sizing: border-box;
 }
 
+.centerPanel {
+  background-color: white;
+}
+
 iframe {
-  padding: 40px 40px 0 40px;
   height: 600px;
   width: 100%;
 }
@@ -12,7 +15,6 @@ iframe {
 .ourArtists {
   text-align: center;
   padding-top: 20px;
-  border-top: 1px solid #797979;
   width: 400px;
 }
 
@@ -35,4 +37,4 @@ i:hover {
     height: 400px;
   }
 }
-/*# sourceMappingURL=Homepage.css.map */
+/*# sourceMappingURL=homepage.css.map */

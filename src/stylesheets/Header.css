@@ -20,7 +20,7 @@ header .navbar .nav-link {
 }
 
 header .navbar .nav-link:hover {
-  color: black;
+  color: #ffd7d7 !important;
 }
 
 .logo {
@@ -28,10 +28,12 @@ header .navbar .nav-link:hover {
   position: absolute;
   z-index: 3;
   left: 10px;
-  top: 0px;
+  top: 10px;
   height: 200px;
-  -webkit-transform: rotate(-9deg);
-          transform: rotate(-9deg);
+  -webkit-transform: rotate(-7deg);
+          transform: rotate(-7deg);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   width: auto;
 }
-/*# sourceMappingURL=Header.css.map */
+/*# sourceMappingURL=header.css.map */

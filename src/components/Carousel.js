@@ -5,14 +5,16 @@ import "../stylesheets/Carousel.css";
 
 function Slides() {
 	return (
-		<div>
+		<div className="carouselContainer">
 			<div className="carousel">
 				<Carousel
 					autoPlay
 					infiniteLoop
 					interval="5000"
 					transitionTime="1000"
-				><div>
+					dynamicHeight={true}
+				>
+					<div>
 						<img src="https://www.psychedelicbabymag.com/wp-content/uploads/2020/09/Niko-Novak-1.jpg" />
 						<p className="legend">Niko Novak</p>
 					</div>

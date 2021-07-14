@@ -6,11 +6,11 @@ import "../stylesheets/ReleasesList.css";
 
 const List = ({ releases }) => {
 	return (
-		<div className="container mt-5">
-			<div className="row releasesList">
+		<div className="container ">
+			<div className="row releasesList ">
 				{releases.map((release, i) => {
 					return (
-						<div className="cardContainer col-lg-4">
+						<div className="cardContainer col-lg-4 col-md-6">
 							<Link
 								to={{
 									pathname: `releases/${release.title}`,
