@@ -5,6 +5,7 @@ import Homepage from "./views/Homepage";
 import ArtistScreen from "./views/ArtistScreen";
 import ArtistsScreen from "./views/ArtistsScreen";
 import ReleasesScreen from "./views/ReleasesScreen";
+import AboutScreen from "./views/AboutScreen";
 function App(props) {
 	return (
 		<Router>
@@ -15,9 +16,11 @@ function App(props) {
 				<Route path="/" component={Homepage} exact />
 				<Route path="/releases" component={ReleasesScreen} />
 				<Route path="/artists" component={ArtistsScreen} />
+				<Route path="/about" component={AboutScreen} />
+
 				<Route path="/artist/:id" component={ArtistScreen} exact />
 			</div>
-			<Footer /> 
+			<Footer />
 		</Router>
 	);
 }

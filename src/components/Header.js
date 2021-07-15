@@ -1,12 +1,5 @@
 import React from "react";
-import {
-	Nav,
-	Navbar,
-	NavDropdown,
-	Button,
-	Form,
-	FormControl,
-} from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import Logo from "../logo.svg";
 import "../stylesheets/Header.css";
 

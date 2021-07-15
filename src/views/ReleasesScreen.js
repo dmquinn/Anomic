@@ -14,7 +14,7 @@ function Releases(props) {
 					style={{
 						position: "relative",
 						height: "100px",
-						width: "100vw",
+						width: "150vw",
 						marginLeft: "-120px",
 						backgroundColor: "#001427",
 						border: "none",
@@ -22,10 +22,13 @@ function Releases(props) {
 				></div>
 				<div className="d-flex justify-content-end mt-5">
 					{" "}
-					<h1 className=" boxedText">Releases</h1>
+					<h1 className=" boxedText mx-3">Releases</h1>
 				</div>
-				<div className="centerPanel col-lg-10">
-					<ReleasesList releases={releases} />
+
+				<div className="d-flex justify-content-center">
+					<div className="centerPanel col-lg-10">
+						<ReleasesList releases={releases} />
+					</div>
 				</div>
 			</div>
 		</div>

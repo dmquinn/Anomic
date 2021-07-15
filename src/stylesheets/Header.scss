@@ -23,7 +23,7 @@ header {
 }
 .logo {
 	// mix-blend-mode: multiply;
-	opacity: 80%;
+	// opacity: 80%;
 	position: absolute;
 	z-index: 3;
 	left: 10px;
@@ -32,4 +32,15 @@ header {
 	transform: rotate(-7deg);
 	transition: 0.5s;
 	width: auto;
+}
+.navbar-toggler {
+	background-color: rgba(255, 255, 255, 0.363) !important;
+	border-radius: 40%;
+}
+
+/* small screens */
+@media screen and (max-width: 768px) {
+	.logo {
+		height: 100px;
+	}
 }

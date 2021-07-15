@@ -80,7 +80,7 @@ const releases = [
 		id: 12,
 		artist: "Errorr",
 		title: "Smash Hit",
-		image: "https://f4.bcbits.com/img/a3940677445_2.jpg",
+		image: "https://f4.bcbits.com/img/a1273033273_16.jpg",
 		info: "",
 	},
 ];

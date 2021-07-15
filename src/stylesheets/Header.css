@@ -24,7 +24,6 @@ header .navbar .nav-link:hover {
 }
 
 .logo {
-  opacity: 80%;
   position: absolute;
   z-index: 3;
   left: 10px;
@@ -35,5 +34,17 @@ header .navbar .nav-link:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   width: auto;
+}
+
+.navbar-toggler {
+  background-color: rgba(255, 255, 255, 0.363) !important;
+  border-radius: 40%;
+}
+
+/* small screens */
+@media screen and (max-width: 768px) {
+  .logo {
+    height: 100px;
+  }
 }
 /*# sourceMappingURL=header.css.map */
