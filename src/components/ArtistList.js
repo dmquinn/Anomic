@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import ArtistCard from "./ArtistCard";
-import Loader from "./Loader";
 import "../stylesheets/ArtistList.css";
-// prepare for deployment environment variable
 
 const List = ({ artists }) => {
 	return (

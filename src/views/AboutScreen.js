@@ -9,7 +9,6 @@ function AboutScreen() {
 						className="d-flex justify-content-center"
 						style={{
 							height: "100px",
-							width: "150vw",
 							position: "relative",
 							marginLeft: "-120px",
 							backgroundColor: "#001427",

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { withRouter } from "react-router-dom";
 import "../stylesheets/ArtistScreen.css";
 import releases from "../releases";
 import ReleasesList from "../components/ReleasesList";
@@ -13,6 +12,10 @@ function ArtistScreen(props) {
 	});
 	releaseCards = [...new Set(selected.map((q) => q.artist))];
 
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
+
 	return (
 		<>
 			{!!artistDetails && (
@@ -25,35 +28,33 @@ function ArtistScreen(props) {
 					<h1 className="boxedText">{artistDetails.name}</h1>
 					<div className="contianer d-flex justify-content-center">
 						<div className="centerPanel col-lg-10">
-							<div className="socialMediaRow off">
+							<div className="d-flex socialMediaRow w-50 ">
 								<a href={artistDetails.facebook}>
 									<i className="fab fa-facebook-f p-2"></i>
 								</a>
 								<a href={artistDetails.instagram}>
-									<i class="fab fa-instagram p-2"></i>
+									<i className="fab fa-instagram p-2"></i>
 								</a>
 								<a href={artistDetails.bandcamp}>
-									<i class="fab fa-bandcamp p-2"></i>
+									<i className="fab fa-bandcamp p-2"></i>
 								</a>
 								<a href={artistDetails.youtube}>
-									<i class="fab fa-youtube p-2"></i>
+									<i className="fab fa-youtube p-2"></i>
 								</a>
 							</div>
-							<div className="row">
-								<div className="d-flex justify-content-center mt-5">
-									<div className="col-lg-5 col-md-5 col-sm-8 mt-5 bio p-5">
-										{artistDetails.bio}
-									</div>
-									<div className="col-lg-5 col-md-5 col-sm-8 mt-5 bio p-5">
-										<iframe
-											className="artistScreenIframe"
-											src={artistDetails.embed}
-											title="YouTube video player"
-											frameborder="0"
-											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-											allowfullscreen
-										></iframe>
-									</div>
+							<div className="w-100 ">
+								<div className="col-lg-5 ms-5 col-md-5 mt-5 bio p-5">
+									{artistDetails.bio}
+								</div>
+								<div className="col-lg-6 col-md-5 mt-5 bio p-5">
+									<iframe
+										className="artistScreenIframe"
+										src={artistDetails.embed}
+										title="YouTube video player"
+										frameBorder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+										allowFullScreen
+									></iframe>
 								</div>
 							</div>
 							<div className="d-flex justify-content-center mt-5">

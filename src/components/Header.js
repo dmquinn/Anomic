@@ -10,7 +10,12 @@ function Header() {
 				<img src={Logo} alt="" className="logo" />
 			</a>
 			<header>
-				<Navbar expand="lg" className="navLinks">
+				<Navbar
+					bg="transparent"
+					variant="dark"
+					expand="lg"
+					className="navLinks"
+				>
 					<Navbar.Brand href="/"></Navbar.Brand>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav" className="ml-auto">

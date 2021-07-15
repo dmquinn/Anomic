@@ -6,6 +6,7 @@ import ArtistScreen from "./views/ArtistScreen";
 import ArtistsScreen from "./views/ArtistsScreen";
 import ReleasesScreen from "./views/ReleasesScreen";
 import AboutScreen from "./views/AboutScreen";
+import EventsScreen from "./views/EventsScreen";
 function App(props) {
 	return (
 		<Router>
@@ -17,7 +18,7 @@ function App(props) {
 				<Route path="/releases" component={ReleasesScreen} />
 				<Route path="/artists" component={ArtistsScreen} />
 				<Route path="/about" component={AboutScreen} />
-
+				<Route path="/events" component={EventsScreen} />
 				<Route path="/artist/:id" component={ArtistScreen} exact />
 			</div>
 			<Footer />

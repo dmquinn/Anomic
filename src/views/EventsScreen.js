@@ -1,13 +1,6 @@
-import React, { useEffect } from "react";
-import ArtistList from "../components/ArtistList";
-import artists from "../artists";
-import "../stylesheets/Homepage.css";
+import React from "react";
 
-function ArtistScreen(props) {
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
-
+function EventsScreen() {
 	return (
 		<div className="contianer d-flex justify-content-center">
 			<div className="centerPanel col-lg-10 ">
@@ -22,13 +15,13 @@ function ArtistScreen(props) {
 				></div>
 				<div className="d-flex justify-content-end">
 					{" "}
-					<h1 className="mt-5 mx-3 boxedText">Our Artists</h1>
+					<h1 className="mt-5 mx-3 boxedText">Events</h1>
 				</div>
-				<ArtistList artists={artists}></ArtistList>
+				<h1 className="offset-1 mt-5">No Events to Show Yet!</h1>
 				<br />
 			</div>
 		</div>
 	);
 }
-//test
-export default ArtistScreen;
+
+export default EventsScreen;

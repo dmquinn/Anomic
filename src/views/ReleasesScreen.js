@@ -4,18 +4,18 @@ import releases from "../releases";
 
 function Releases(props) {
 	useEffect(() => {
-		console.log(props);
-	});
+		window.scrollTo(0, 0);
+	}, []);
 	return (
 		<div className="contianer d-flex justify-content-center">
 			<div className="centerPanel col-lg-10 ">
 				<div
-					className="d-flex justify-content-center"
+					className="d-flex w-100 justify-content-center"
 					style={{
 						position: "relative",
 						height: "100px",
-						width: "150vw",
-						marginLeft: "-120px",
+						width: "150%",
+						// marginLeft: "-120px",
 						backgroundColor: "#001427",
 						border: "none",
 					}}
