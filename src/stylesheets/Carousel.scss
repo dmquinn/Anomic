@@ -2,7 +2,6 @@
 	height: 100vh;
 	width: 100vw;
 	.carousel {
-		object-fit: cover;
 		height: 100vh;
 		overflow: hidden;
 		.carousel-item img {
@@ -65,5 +64,13 @@
 			height: 100vh;
 			width: 100vw;
 		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.carousel-root {
+		height: 200px;
+	}
+	.carousel {
+		height: 200px;
 	}
 }

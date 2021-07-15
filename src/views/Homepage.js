@@ -28,16 +28,19 @@ function Homepage(props) {
 						<h1 className="mt-5 mx-3 boxedText">Track in Focus:</h1>
 					</div>
 					<div className="row w-100">
-						<div className="col-lg-5 p-5 col-sm-12 mt-5 ms-lg-5">
+						<div className="col-lg-5 p-5 col-sm-12 mt-lg-5 ms-lg-5">
 							<h5>
 								Maybe here we could have a bit of text about the
 								track (if you want to have a video here at
-								all?). This can be updated whenever. I've linked
-								it to the anomic youtube channel as well so the
-								suggested videos at the end will be other anomic
-								ones rather than the usual ones targeted to the
-								user or whatever.
+								all?). This can be updated whenever.{" "}
 							</h5>
+							<h5>
+								I've linked it to the anomic youtube channel as
+								well so the suggested videos at the end will be
+								other anomic ones rather than the usual ones
+								targeted to the user or whatever.
+							</h5>
+
 							<h5>
 								Unfortunately it isn't possible as far as I know
 								to remove all the youtube branding and stuff

@@ -9,7 +9,7 @@ const List = ({ releases }) => {
 			<div className="row releasesList ">
 				{releases.map((release, i) => {
 					return (
-						<div className="cardContainer col-lg-4 col-md-6">
+						<div className="cardContainer col-lg-4 col-md-6 pb-5">
 							<Link
 								to={{
 									pathname: `releases/${release.title}`,

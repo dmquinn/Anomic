@@ -28,7 +28,7 @@ function ArtistScreen(props) {
 					<h1 className="boxedText">{artistDetails.name}</h1>
 					<div className="contianer d-flex justify-content-center">
 						<div className="centerPanel col-lg-10">
-							<div className="d-flex socialMediaRow w-50 ">
+							<div className="d-flex socialMediaRow w-100 ">
 								<a href={artistDetails.facebook}>
 									<i className="fab fa-facebook-f p-2"></i>
 								</a>
@@ -42,7 +42,7 @@ function ArtistScreen(props) {
 									<i className="fab fa-youtube p-2"></i>
 								</a>
 							</div>
-							<div className="w-100 ">
+							<div className="row w-100 ">
 								<div className="col-lg-5 ms-5 col-md-5 mt-5 bio p-5">
 									{artistDetails.bio}
 								</div>
@@ -64,7 +64,7 @@ function ArtistScreen(props) {
 								releaseCards.map((release, i) => {
 									return (
 										<ReleasesList
-											key={releases.id}
+											key={i}
 											releases={selected}
 										/>
 									);
