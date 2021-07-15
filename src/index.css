@@ -17,6 +17,7 @@ body {
 }
 .boxedText {
 	background-color: rgb(255, 192, 229);
+	color: rgba(0, 0, 0, 0.877);
 	padding: 20px;
 	clip-path: polygon(0 1%, 100% 0, 100% 80%, 75% 100%, 0 100%, 0% 50%);
 }
