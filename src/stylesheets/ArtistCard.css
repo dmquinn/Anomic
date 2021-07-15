@@ -21,7 +21,7 @@
   transition: 0.5s;
 }
 
-.card:hover > img {
+.card img:hover {
   -webkit-filter: brightness(70%);
           filter: brightness(70%);
   -webkit-transition: 0.5s;

@@ -40,8 +40,7 @@ header {
 	border: none;
 
 	&:focus,
-	&:active,
-	&-icon:focus {
+	&:active {
 		outline: none;
 		box-shadow: none;
 	}
@@ -51,5 +50,12 @@ header {
 @media screen and (max-width: 768px) {
 	.logo {
 		height: 100px;
+	}
+	.nav-link {
+		background-color: black;
+		text-align: center;
+		text-shadow: none;
+		border: 1px solid black;
+		width: 270px;
 	}
 }

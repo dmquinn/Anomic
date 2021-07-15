@@ -44,7 +44,7 @@ header .navbar .nav-link:hover {
   border: none;
 }
 
-.navbar-toggler:focus, .navbar-toggler:active, .navbar-toggler-icon:focus {
+.navbar-toggler:focus, .navbar-toggler:active {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -54,6 +54,13 @@ header .navbar .nav-link:hover {
 @media screen and (max-width: 768px) {
   .logo {
     height: 100px;
+  }
+  .nav-link {
+    background-color: black;
+    text-align: center;
+    text-shadow: none;
+    border: 1px solid black;
+    width: 270px;
   }
 }
 /*# sourceMappingURL=header.css.map */
