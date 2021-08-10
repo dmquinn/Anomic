@@ -30,11 +30,13 @@
 			background: linear-gradient(rgba(0, 0, 0, 0.678), transparent);
 		}
 		.legend {
-			background-color: rgb(255, 192, 229);
-			text-shadow: 2px 2px rgba(0, 0, 0, 0.664);
+			position: absolute;
+			left: 300px;
+			background-color: rgba(255, 192, 229, 0);
+			// text-shadow: 2px 2px rgba(0, 0, 0, 0.664);
 			opacity: 1;
 			width: 200px;
-			font-size: 2em;
+			font-size: 1.4em;
 			padding: 20px;
 			border-radius: 0;
 			clip-path: polygon(

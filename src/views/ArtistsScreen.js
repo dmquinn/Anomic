@@ -20,9 +20,9 @@ function ArtistScreen(props) {
 						border: "none",
 					}}
 				></div>
-				<div className="d-flex justify-content-end">
+				<div className="d-flex justify-content-end boxedText">
 					{" "}
-					<h1 className="mt-5 mx-3 boxedText">Our Artists</h1>
+					<h1 className="">Our Artists</h1>
 				</div>
 				<ArtistList artists={artists}></ArtistList>
 				<br />

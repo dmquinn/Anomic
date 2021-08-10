@@ -22,8 +22,9 @@ function Header() {
 						<Nav className="ml-auto">
 							<Nav.Link href="/artists">Artists</Nav.Link>
 							<Nav.Link href="/releases">Releases</Nav.Link>
-							<Nav.Link href="/events">Events</Nav.Link>
+							<Nav.Link href="/events">Upcoming</Nav.Link>
 							<Nav.Link href="/about">About</Nav.Link>
+							<Nav.Link href="/about">Shop</Nav.Link>
 						</Nav>
 					</Navbar.Collapse>
 				</Navbar>

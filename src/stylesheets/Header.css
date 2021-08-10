@@ -24,10 +24,11 @@ header .navbar .nav-link:hover {
 }
 
 .logo {
+  opacity: 90%;
   position: absolute;
   z-index: 3;
-  left: 10px;
-  top: 10px;
+  left: 40px;
+  top: 40px;
   height: 200px;
   -webkit-transform: rotate(-7deg);
           transform: rotate(-7deg);
