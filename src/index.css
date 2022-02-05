@@ -1,59 +1,9 @@
-* {
-	font-family: "Economica", sans-serif;
-}
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Rowdies&display=swap");
+@import "./stylesheets/ArtistCard.css";
 body {
-	margin: 0;
-	background-color: rgb(230, 230, 230);
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	overflow-x: hidden;
-	overflow-y: visible;
-}
-
-.logo:hover {
-	color: rgb(255, 224, 251);
-	animation: shake 0.3s;
-	animation-iteration-count: 2;
-}
-.boxedText {
-	background-color: rgb(255, 192, 229);
-	color: rgba(0, 0, 0, 0.877);
-	padding: 20px;
-	clip-path: polygon(0 1%, 100% 0, 100% 80%, 75% 100%, 0 100%, 0% 50%);
-}
-
-@keyframes shake {
-	0% {
-		transform: translate(1px, 1px) rotate(-9deg);
-	}
-	10% {
-		transform: translate(-1px, -2px) rotate(-10deg);
-	}
-	20% {
-		transform: translate(-3px, 0px) rotate(-8deg);
-	}
-	30% {
-		transform: translate(3px, 2px) rotate(-9deg);
-	}
-	40% {
-		transform: translate(1px, -1px) rotate(-8deg);
-	}
-	50% {
-		transform: translate(-1px, 2px) rotate(-10deg);
-	}
-	60% {
-		transform: translate(-3px, 1px) rotate(-8deg);
-	}
-	70% {
-		transform: translate(3px, 1px) rotate(-10deg);
-	}
-	80% {
-		transform: translate(-1px, -1px) rotate(-8deg);
-	}
-	90% {
-		transform: translate(1px, 2px) rotate(-9deg);
-	}
-	100% {
-		transform: translate(1px, -2px) rotate(-10deg);
-	}
+  background-color: #1f2024;
+  color: rgb(17, 17, 17);
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  overflow-x: hidden;
 }

@@ -1,17 +1,25 @@
-import dotenv from "dotenv";
-import { map } from "./data/artists";
-import Artist from "./models/artistModel";
+const mongoose = require("mongoose");
+const dotenv = require("dotenv").config();
+const users = require("./data/users");
+const artists = require("./data/artists");
+const User = require("./models/userModel");
+const Artist = require("./models/artistModel");
 
-import connectDB from "./config/db";
-dotenv.config();
+const connectDB = require("./config/db");
+
 connectDB();
 
 const importData = async () => {
+  console.log(artists);
   try {
     await Artist.deleteMany();
+    await User.deleteMany();
 
-    const sampleArtists = map((artist) => {
-      return { ...artist };
+    const createdUsers = await User.insertMany(users);
+
+    const adminUser = createdUsers[0]._id;
+    const sampleArtists = artists.map((artist) => {
+      return { ...artist, user: adminUser };
     });
     await Artist.insertMany(sampleArtists);
 
@@ -25,6 +33,7 @@ const importData = async () => {
 const destroyData = async () => {
   try {
     await Artist.deleteMany();
+    await User.deleteMany();
 
     console.log("data destroyed");
     process.exit();

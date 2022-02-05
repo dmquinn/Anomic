@@ -2,22 +2,18 @@ const express = require("express");
 const router = express.Router();
 const {
   getArtists,
-  getProductById,
-  deleteProduct,
-  updateProduct,
-  createProduct,
-  createProductReview,
-  getTopArtists,
-} = require("../controllers/productController");
+  getArtistById,
+  deleteArtist,
+  updateArtist,
+  createArtist,
+} = require("../controllers/artistController");
 const { protect, admin } = require("../middleware/authMiddleware.js");
 
-router.route("/").get(getArtists).post(protect, admin, createProduct);
-router.route("/:id/reviews").post(protect, createProductReview);
-router.get("/top", getTopArtists);
+router.route("/").get(getArtists).post(protect, admin, createArtist);
 router
   .route("/:id")
-  .get(getProductById)
-  .delete(protect, admin, deleteProduct)
-  .put(protect, admin, updateProduct);
+  .get(getArtistById)
+  .delete(protect, admin, deleteArtist)
+  .put(protect, admin, updateArtist);
 
 module.exports = router;

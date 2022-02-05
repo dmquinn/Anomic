@@ -1,17 +1,15 @@
-import { path } from "path";
-import { express } from "express";
-import { dotenv } from "dotenv";
-import { connectDB } from "./config/db";
-import { artistRoutes } from "./routes/artistRoutes";
-import { notFound, errorHandler } from "./middleware/errorMiddleware";
-
-import uploadRoutes from "./routes/uploadRoutes";
-import morgan from "morgan";
+const path = require("path");
+const express = require("express");
+const dotenv = require("dotenv");
+const connectDB = require("./config/db");
+const artistRoutes = require("./routes/artistRoutes");
+const { notFound, errorHandler } = require("./middleware/errorMiddleware");
+const uploadRoutes = require("./routes/uploadRoutes");
+const morgan = require("morgan");
 
 dotenv.config();
 connectDB();
 const app = express();
-
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
@@ -24,7 +22,7 @@ app.use("/api/upload", uploadRoutes);
 const folder = path.resolve();
 app.use("/uploads", express.static(path.join(folder, "/uploads")));
 
-if ((process.env.NODE_ENV = "production")) {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "./build")));
 
   app.get("*", (req, res) =>
@@ -37,8 +35,10 @@ if ((process.env.NODE_ENV = "production")) {
 }
 
 app.use(notFound);
-
 app.use(errorHandler);
+app.get("/api/artists", (req, res) => {
+  res.json(res);
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(

@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Rowdies&display=swap");
+
 header {
   position: absolute;
   top: 20px;
   right: 10%;
   z-index: 3;
-  text-shadow: 2px 2px 2px #da1637;
+  font-family: "Rowdies", cursive;
 }
 
 header .navbar {
@@ -20,7 +22,7 @@ header .navbar .nav-link {
 }
 
 header .navbar .nav-link:hover {
-  color: #ffd7d7 !important;
+  color: #e6e6e6 !important;
 }
 
 .logo {
@@ -30,8 +32,6 @@ header .navbar .nav-link:hover {
   left: 40px;
   top: 40px;
   height: 200px;
-  -webkit-transform: rotate(-7deg);
-          transform: rotate(-7deg);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   width: auto;
@@ -45,10 +45,11 @@ header .navbar .nav-link:hover {
   border: none;
 }
 
-.navbar-toggler:focus, .navbar-toggler:active {
+.navbar-toggler:focus,
+.navbar-toggler:active {
   outline: none;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 /* small screens */
@@ -64,4 +65,4 @@ header .navbar .nav-link:hover {
     width: 270px;
   }
 }
-/*# sourceMappingURL=header.css.map */
+/*# sourceMappingURL=Header.css.map */

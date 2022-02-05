@@ -7,24 +7,24 @@ import ArtistsScreen from "./views/ArtistsScreen";
 import ReleasesScreen from "./views/ReleasesScreen";
 import AboutScreen from "./views/AboutScreen";
 import EventsScreen from "./views/EventsScreen";
-function App(props) {
-	return (
-		<Router>
-			<div style={{ position: "relative" }}>
-				<Header />
-			</div>
-			<div className="App" style={{ position: "relative" }}>
-				<Route path="/" component={Homepage} exact />
-				<Route path="/releases" component={ReleasesScreen} />
-				<Route path="/artists" component={ArtistsScreen} />
-				<Route path="/about" component={AboutScreen} />
-				<Route path="/events" component={EventsScreen} />
-				<Route path="/artist/:id" component={ArtistScreen} exact />
-			</div>
-			<Footer />
-		</Router>
-	);
-}
+const App = () => {
+  return (
+    <Router>
+      <div style={{ position: "relative" }}>
+        <Header />
+      </div>
+      <div className="App" style={{ position: "relative" }}>
+        <Route path="/" component={Homepage} />
+        <Route path="/releases" component={ReleasesScreen} />
+        <Route path="/artists" component={ArtistsScreen} />
+        <Route path="/about" component={AboutScreen} />
+        <Route path="/events" component={EventsScreen} />
+        <Route path="/artist/:id" component={ArtistScreen} exact />
+      </div>
+      <Footer />
+    </Router>
+  );
+};
 //test
 
 export default App;
