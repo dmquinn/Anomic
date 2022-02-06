@@ -14,12 +14,12 @@ const App = () => {
         <Header />
       </div>
       <div className="App" style={{ position: "relative" }}>
-        <Route path="/" component={Homepage} />
+        <Route path="/" component={Homepage} exact />
         <Route path="/releases" component={ReleasesScreen} />
         <Route path="/artists" component={ArtistsScreen} />
         <Route path="/about" component={AboutScreen} />
         <Route path="/events" component={EventsScreen} />
-        <Route path="/artist/:id" component={ArtistScreen} exact />
+        <Route path="/:name" component={ArtistScreen} exact />
       </div>
       <Footer />
     </Router>

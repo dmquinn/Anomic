@@ -2,23 +2,37 @@ import React, { useEffect } from "react";
 import "../stylesheets/ArtistScreen.css";
 import releases from "../releases";
 import ReleasesList from "../components/ReleasesList";
+import { listArtistDetails } from "../actions/artistActions";
+import { useDispatch, useSelector } from "react-redux";
 
 function ArtistScreen(props) {
-	const artistDetails = props.history.location.state;
-	let releaseCards = [];
+  const dispatch = useDispatch();
+  const artistDetails = useSelector((state) => state.artistDetails);
 
-	const selected = releases.filter((rel) => {
-		return rel.artist === artistDetails.name;
-	});
-	releaseCards = [...new Set(selected.map((q) => q.artist))];
+  useEffect(() => {
+    dispatch(listArtistDetails());
 
-	useEffect(() => {
-		window.scrollTo(0, 0);
-	}, []);
+    console.log(artistDetails);
+    window.scrollTo(0, 0);
+  }, []);
 
-	return (
-		<>
-			{!!artistDetails && (
+  // const artistDetails = props.history.location.state;
+  //   let releaseCards = [];
+
+  //   const selected = releases.filter((rel) => {
+  //     return rel.artist === artistDetails.name;
+  //   });
+  //   releaseCards = [...new Set(selected.map((q) => q.artist))];
+
+  useEffect(() => {
+    console.log("artist", artistDetails);
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
+    <>
+      SCREEN
+      {/* {!!artistDetails && (
 				<>
 					<img
 						className="artistPageImg"
@@ -69,12 +83,12 @@ function ArtistScreen(props) {
 										/>
 									);
 								})}
-						</div>
-					</div>
+						</div> */}
+      {/* </div>
 				</>
-			)}
-		</>
-	);
+			)} */}
+    </>
+  );
 }
 
 export default ArtistScreen;
