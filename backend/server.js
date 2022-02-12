@@ -37,9 +37,14 @@ if (process.env.NODE_ENV === "production") {
 app.use(notFound);
 app.use(errorHandler);
 app.get("/api/artists", (req, res) => {
+  console.log(res);
   res.json(res);
 });
-
+app.get("/api/artists/:name", (req, res) => {
+  console.log("res", res);
+  // const artist = res.find((p) => p.name === req.params.name);
+  res.json(res);
+});
 const PORT = process.env.PORT || 5000;
 app.listen(
   PORT,

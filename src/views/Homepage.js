@@ -5,7 +5,7 @@ import { listArtists } from "../actions/artistActions";
 import "../stylesheets/Homepage.css";
 import { useDispatch, useSelector } from "react-redux";
 
-const Homepage = ({ match }) => {
+const Homepage = () => {
   const dispatch = useDispatch();
   const artistList = useSelector((state) => state.artistList);
 
@@ -36,13 +36,13 @@ const Homepage = ({ match }) => {
             </a>
           </div>
           <div className="d-flex">
-            <h1 className="mt-5 mx-5 card">In Focus:</h1>
+            <h1 className="mt-5 mx-5 cardText">In Focus:</h1>
           </div>
           <div className="row w-100">
             <div className="col-lg-5 p-5 col-sm-12 mt-lg-5 ms-lg-5">
               {randomArtist && (
                 <>
-                  <h5 className="card mb-2">{randomArtist.name}</h5>
+                  <h5 className="cardText mb-2">{randomArtist.name}</h5>
                   <h6>{randomArtist.description}</h6>
                 </>
               )}
@@ -52,14 +52,14 @@ const Homepage = ({ match }) => {
               title="YouTube video player"
               frameBorder="0"
               autoPlay="1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay;"
               allowFullScreen
               className="mt-3 col-lg-6 p-4"
-              style={{ borderBottom: "1px solid grey" }}
+              style={{ borderBottom: "1px solid grey", position: "relative" }}
             ></iframe>
           </div>
           <div className="d-flex justify-content-end mx-3 w-60">
-            <h1 className="mt-5 mx-5 card">Our Artists</h1>
+            <h1 className="mt-5 mx-5 cardText">Our Artists</h1>
           </div>
           <ArtistList artists={artists}></ArtistList>
           <br />

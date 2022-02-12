@@ -5,16 +5,15 @@ import ReleasesList from "../components/ReleasesList";
 import { listArtistDetails } from "../actions/artistActions";
 import { useDispatch, useSelector } from "react-redux";
 
-function ArtistScreen(props) {
+function ArtistScreen({ match }) {
   const dispatch = useDispatch();
   const artistDetails = useSelector((state) => state.artistDetails);
 
   useEffect(() => {
-    dispatch(listArtistDetails());
-
+    dispatch(listArtistDetails(match.params.name));
     console.log(artistDetails);
     window.scrollTo(0, 0);
-  }, []);
+  }, [match.params.name]);
 
   // const artistDetails = props.history.location.state;
   //   let releaseCards = [];
@@ -23,11 +22,6 @@ function ArtistScreen(props) {
   //     return rel.artist === artistDetails.name;
   //   });
   //   releaseCards = [...new Set(selected.map((q) => q.artist))];
-
-  useEffect(() => {
-    console.log("artist", artistDetails);
-    window.scrollTo(0, 0);
-  }, []);
 
   return (
     <>

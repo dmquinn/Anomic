@@ -8,7 +8,7 @@ function ArtistScreen(props) {
   }, []);
 
   return (
-    <div className="contianer d-flex justify-content-center">
+    <div className="container d-flex justify-content-center">
       <div className="centerPanel col-lg-10 ">
         <div
           className="d-flex justify-content-center"

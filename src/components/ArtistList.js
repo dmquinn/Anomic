@@ -4,19 +4,19 @@ import ArtistCard from "./ArtistCard";
 import "../stylesheets/ArtistList.css";
 
 const List = ({ artists }) => {
-  console.log("artists", artists);
   return (
     <div className="container">
       <div className="row list gx-0">
-        {artists.map((artist, i) => {
-          return (
-            <div className="col-lg-12 p-5 col-md-6" key={i}>
-              <Link to={`/${artist.name}`}>
-                <ArtistCard artist={artist} key={artist.id}></ArtistCard>
-              </Link>
-            </div>
-          );
-        })}
+        {!!artists &&
+          artists.map((artist, i) => {
+            return (
+              <div className="col-sm-12 p-5" key={i}>
+                <Link to={`artists/${artist.name}`}>
+                  <ArtistCard artist={artist} key={artist._id}></ArtistCard>
+                </Link>
+              </div>
+            );
+          })}
       </div>
     </div>
   );

@@ -12,7 +12,8 @@ const getArtists = asyncHandler(async (req, res) => {
 });
 
 const getArtistById = asyncHandler(async (req, res) => {
-  const artist = await Artist.findById(req.params.id);
+  console.log("req.params", req.params);
+  const artist = await Artist.findOne({ name: req.params.name });
   if (artist) {
     res.json(artist);
   } else {

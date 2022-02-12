@@ -2,9 +2,9 @@ import {
   ARTIST_LIST_REQUEST,
   ARTIST_LIST_SUCCESS,
   ARTIST_LIST_FAIL,
-  // ARTIST_DETAILS_REQUEST,
-  // ARTIST_DETAILS_SUCCESS,
-  // ARTIST_DETAILS_FAIL,
+  ARTIST_DETAILS_REQUEST,
+  ARTIST_DETAILS_SUCCESS,
+  ARTIST_DETAILS_FAIL,
   // ARTIST_DELETE_REQUEST,
   // ARTIST_DELETE_SUCCESS,
   // ARTIST_DELETE_FAIL,
@@ -37,26 +37,26 @@ export const listArtists = () => async (dispatch) => {
   }
 };
 
-// export const listArtistDetails = (id) => async (dispatch) => {
-//   try {
-//     dispatch({ type: ARTIST_DETAILS_REQUEST });
-
-//     const { data } = await axios.get(`/api/artists/${id}`);
-
-//     dispatch({
-//       type: ARTIST_DETAILS_SUCCESS,
-//       payload: data,
-//     });
-//   } catch (error) {
-//     dispatch({
-//       type: ARTIST_DETAILS_FAIL,
-//       payload:
-//         error.response && error.response.data.message
-//           ? error.response.data.message
-//           : error.message,
-//     });
-//   }
-// };
+export const listArtistDetails = (name) => async (dispatch) => {
+  console.log("action", name);
+  try {
+    dispatch({ type: ARTIST_DETAILS_REQUEST });
+    const { data } = await fetch(`/api/artists/${name}`);
+    console.log("data", data);
+    dispatch({
+      type: ARTIST_DETAILS_SUCCESS,
+      payload: data,
+    });
+  } catch (error) {
+    dispatch({
+      type: ARTIST_DETAILS_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    });
+  }
+};
 // export const deleteArtist = (id) => async (dispatch, getState) => {
 //   try {
 //     dispatch({

@@ -19,7 +19,7 @@ const App = () => {
         <Route path="/artists" component={ArtistsScreen} />
         <Route path="/about" component={AboutScreen} />
         <Route path="/events" component={EventsScreen} />
-        <Route path="/:name" component={ArtistScreen} exact />
+        <Route path="/artists/:name" component={ArtistScreen} exact />
       </div>
       <Footer />
     </Router>

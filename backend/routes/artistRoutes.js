@@ -11,7 +11,7 @@ const { protect, admin } = require("../middleware/authMiddleware.js");
 
 router.route("/").get(getArtists).post(protect, admin, createArtist);
 router
-  .route("/:id")
+  .route("/:name")
   .get(getArtistById)
   .delete(protect, admin, deleteArtist)
   .put(protect, admin, updateArtist);
