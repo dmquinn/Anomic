@@ -7,6 +7,10 @@ import ArtistsScreen from "./views/ArtistsScreen";
 import ReleasesScreen from "./views/ReleasesScreen";
 import AboutScreen from "./views/AboutScreen";
 import EventsScreen from "./views/EventsScreen";
+import LoginScreen from "./views/LoginScreen";
+import ArtistEditScreen from "./views/ArtistEditScreen";
+import ArtistListScreen from "./views/ArtistListScreen";
+
 const App = () => {
   return (
     <Router>
@@ -20,11 +24,13 @@ const App = () => {
         <Route path="/about" component={AboutScreen} />
         <Route path="/events" component={EventsScreen} />
         <Route path="/artists/:name" component={ArtistScreen} exact />
+        <Route path="/login" component={LoginScreen} />
+        <Route path="/artistEdit" component={ArtistEditScreen} />
+        <Route path="/artistList" component={ArtistListScreen} />
       </div>
       <Footer />
     </Router>
   );
 };
-//test
 
 export default App;

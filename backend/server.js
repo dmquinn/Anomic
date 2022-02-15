@@ -3,8 +3,9 @@ const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const artistRoutes = require("./routes/artistRoutes");
-const { notFound, errorHandler } = require("./middleware/errorMiddleware");
+const userRoutes = require("./routes/userRoutes");
 const uploadRoutes = require("./routes/uploadRoutes");
+const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const morgan = require("morgan");
 
 dotenv.config();
@@ -16,7 +17,7 @@ if (process.env.NODE_ENV === "development") {
 app.use(express.json());
 
 app.use("/api/artists", artistRoutes);
-
+app.use("/api/users", userRoutes);
 app.use("/api/upload", uploadRoutes);
 
 const folder = path.resolve();
@@ -37,13 +38,11 @@ if (process.env.NODE_ENV === "production") {
 app.use(notFound);
 app.use(errorHandler);
 app.get("/api/artists", (req, res) => {
-  console.log(res);
   res.json(res);
 });
 app.get("/api/artists/:name", (req, res) => {
-  console.log("res", res);
-  // const artist = res.find((p) => p.name === req.params.name);
-  res.json(res);
+  const artist = res.find((p) => p.name === req.params.name);
+  res.json("apires", res);
 });
 const PORT = process.env.PORT || 5000;
 app.listen(

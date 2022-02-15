@@ -6,4 +6,18 @@ body {
   margin: 0;
   font-family: "PT Sans", sans-serif;
   overflow-x: hidden;
+  height: 0px;
+}
+footer {
+  color: white !important;
+  text-decoration: none !important;
+}
+form {
+  margin-top: 200px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+td,
+th {
+  background-color: white !important;
 }

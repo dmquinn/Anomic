@@ -12,10 +12,10 @@ const getArtists = asyncHandler(async (req, res) => {
 });
 
 const getArtistById = asyncHandler(async (req, res) => {
-  console.log("req.params", req.params);
   const artist = await Artist.findOne({ name: req.params.name });
+  console.log("parans yo", artist);
   if (artist) {
-    res.json(artist);
+    res.status(200).json(artist);
   } else {
     res.status(404);
     throw new Error("Artist not found");
@@ -47,7 +47,7 @@ const updateArtist = asyncHandler(async (req, res) => {
   const { name, description, image } = req.body;
 
   const artist = await Artist.findById(req.params.id);
-
+  console.log("artist", artist);
   if (artist) {
     artist.name = name;
     artist.description = description;

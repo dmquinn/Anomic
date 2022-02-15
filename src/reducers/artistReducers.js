@@ -35,7 +35,6 @@ export const artistListReducer = (state = { artists: [] }, action) => {
 };
 
 export const artistDetailsReducer = (state = { artist: {} }, action) => {
-  console.log("reducer", state, action);
   switch (action.type) {
     case ARTIST_DETAILS_REQUEST:
       return { loading: true, ...state };

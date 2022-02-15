@@ -7,26 +7,6 @@ function ArtistScreen(props) {
     window.scrollTo(0, 0);
   }, []);
 
-  return (
-    <div className="container d-flex justify-content-center">
-      <div className="centerPanel col-lg-10 ">
-        <div
-          className="d-flex justify-content-center"
-          style={{
-            height: "100px",
-            position: "relative",
-            backgroundColor: "#001427",
-            border: "none",
-          }}
-        ></div>
-        <div className="d-flex justify-content-end boxedText">
-          {" "}
-          <h1 className="">Our Artists</h1>
-        </div>
-        <ArtistList artists={props.artists}></ArtistList>
-        <br />
-      </div>
-    </div>
-  );
+  return <div className="d-flex justify-content-center"></div>;
 }
 export default ArtistScreen;

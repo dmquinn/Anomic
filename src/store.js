@@ -8,15 +8,7 @@ import {
   artistCreateReducer,
   artistUpdateReducer,
 } from "./reducers/artistReducers";
-import {
-  userLoginReducer,
-  userRegisterReducer,
-  userDetailsReducer,
-  userUpdateProfileReducer,
-  userListReducer,
-  userDeleteReducer,
-  userUpdateReducer,
-} from "./reducers/userReducers";
+import { userLoginReducer, userDetailsReducer } from "./reducers/userReducers";
 
 const reducer = combineReducers({
   artistList: artistListReducer,
@@ -26,12 +18,7 @@ const reducer = combineReducers({
   artistUpdate: artistUpdateReducer,
 
   userLogin: userLoginReducer,
-  userRegister: userRegisterReducer,
   userDetails: userDetailsReducer,
-  userUpdateProfile: userUpdateProfileReducer,
-  userList: userListReducer,
-  userDelete: userDeleteReducer,
-  userUpdate: userUpdateReducer,
 });
 
 const userInfoFromStorage = localStorage.getItem("userInfo")

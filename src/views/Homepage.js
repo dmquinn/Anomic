@@ -15,6 +15,7 @@ const Homepage = () => {
   useEffect(() => {
     dispatch(listArtists());
   }, [dispatch]);
+  console.log(randomArtist);
 
   return (
     <>
@@ -47,16 +48,18 @@ const Homepage = () => {
                 </>
               )}
             </div>
-            <iframe
-              src="https://www.youtube.com/embed/nUzTdtJLGuI?modestbranding=1&rel=0"
-              title="YouTube video player"
-              frameBorder="0"
-              autoPlay="1"
-              allow="accelerometer; autoplay;"
-              allowFullScreen
-              className="mt-3 col-lg-6 p-4"
-              style={{ borderBottom: "1px solid grey", position: "relative" }}
-            ></iframe>
+            {randomArtist && (
+              <iframe
+                src={randomArtist.youtube + `?autoplay=1`}
+                title="YouTube video player"
+                frameBorder="0"
+                autoPlay="1"
+                allow="accelerometer; autoplay;"
+                allowFullScreen
+                className="mt-3 col-lg-6 p-4"
+                style={{ borderBottom: "1px solid grey", position: "relative" }}
+              ></iframe>
+            )}
           </div>
           <div className="d-flex justify-content-end mx-3 w-60">
             <h1 className="mt-5 mx-5 cardText">Our Artists</h1>
