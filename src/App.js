@@ -14,20 +14,17 @@ import ArtistListScreen from "./views/ArtistListScreen";
 const App = () => {
   return (
     <Router>
-      <div style={{ position: "relative" }}>
-        <Header />
-      </div>
-      <div className="App" style={{ position: "relative" }}>
-        <Route path="/" component={Homepage} exact />
-        <Route path="/releases" component={ReleasesScreen} />
-        <Route path="/artists" component={ArtistsScreen} />
-        <Route path="/about" component={AboutScreen} />
-        <Route path="/events" component={EventsScreen} />
-        <Route path="/artists/:name" component={ArtistScreen} exact />
-        <Route path="/login" component={LoginScreen} />
-        <Route path="/artistEdit" component={ArtistEditScreen} />
-        <Route path="/artistList" component={ArtistListScreen} />
-      </div>
+      <Header />
+      <Route path="/" component={Homepage} exact />
+      <Route path="/releases" component={ReleasesScreen} />
+      <Route path="/artists" component={ArtistsScreen} />
+      <Route path="/about" component={AboutScreen} />
+      <Route path="/events" component={EventsScreen} />
+      <Route path="/artists/:name" component={ArtistScreen} exact />
+      <Route path="/login" component={LoginScreen} />
+      <Route path="/artistEdit" component={ArtistEditScreen} />
+      <Route path="/artistList" component={ArtistListScreen} />
+      <Route path="/admin/artists/:name/edit" component={ArtistEditScreen} />
       <Footer />
     </Router>
   );

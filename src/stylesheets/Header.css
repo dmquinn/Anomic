@@ -1,16 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Rowdies&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap");
 header {
-  position: absolute;
-  top: 20px;
-  right: 10%;
   z-index: 3;
-  font-family: "Rowdies", cursive;
+  font-family: "Yanone Kaffeesatz", sans-serif;
 }
 
 header .navbar {
   position: absolute;
-  top: 0px;
+  top: 20px;
   right: 20px;
   background-color: rgba(119, 34, 34, 0) !important;
 }
@@ -22,7 +18,7 @@ header .navbar .nav-link {
 }
 
 header .navbar .nav-link:hover {
-  color: #e6e6e6 !important;
+  color: #f9b8ff !important;
 }
 
 .logo {
@@ -56,12 +52,16 @@ header .navbar .nav-link:hover {
 @media screen and (max-width: 991px) {
   .logo {
     height: 85px;
+    top: 10px;
+    left: 10px;
   }
+
   .nav-link {
     background-color: black;
     text-align: center;
     text-shadow: none;
     border: 1px solid black;
+    left: 30px;
     width: 270px;
   }
 }

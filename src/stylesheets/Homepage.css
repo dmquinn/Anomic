@@ -27,7 +27,7 @@ i {
 }
 
 i:hover {
-  color: rgba(32, 32, 32, 0.795);
+  color: rgba(255, 255, 255, 0.795);
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }

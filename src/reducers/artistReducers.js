@@ -46,10 +46,7 @@ export const artistDetailsReducer = (state = { artist: {} }, action) => {
       return state;
   }
 };
-export const artistDeleteReducer = (
-  state = { artist: { reviews: [] } },
-  action
-) => {
+export const artistDeleteReducer = (state = { artist: {} }, action) => {
   switch (action.type) {
     case ARTIST_DELETE_REQUEST:
       return { loading: true };
@@ -61,10 +58,7 @@ export const artistDeleteReducer = (
       return state;
   }
 };
-export const artistCreateReducer = (
-  state = { artist: { reviews: [] } },
-  action
-) => {
+export const artistCreateReducer = (state = { artist: {} }, action) => {
   switch (action.type) {
     case ARTIST_CREATE_REQUEST:
       return { loading: true };
@@ -92,3 +86,17 @@ export const artistUpdateReducer = (state = { artist: {} }, action) => {
       return state;
   }
 };
+// export const ArtistReleaseCreateReducer = (state = {}, action) => {
+//   switch (action.type) {
+//     case ARTIST_CREATE_RELEASE_REQUEST:
+//       return { loading: true };
+//     case ARTIST_CREATE_RELEASE_SUCCESS:
+//       return { loading: false, success: true };
+//     case ARTIST_CREATE_RELEASE_FAIL:
+//       return { loading: false, error: action.payload };
+//     case ARTIST_CREATE_RELEASE_RESET:
+//       return {};
+//     default:
+//       return state;
+//   }
+// };

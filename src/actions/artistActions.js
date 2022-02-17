@@ -107,7 +107,7 @@ export const createArtist = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.post(`/api/artist/`, {}, config);
+    const { data } = await axios.post(`/api/artists/`, {}, config);
 
     dispatch({
       type: ARTIST_CREATE_SUCCESS,
@@ -141,7 +141,7 @@ export const updateArtist = (artist) => async (dispatch, getState) => {
     };
 
     const { data } = await axios.put(
-      `/api/artists/${artist._id}`,
+      `/api/artists/${artist.name}`,
       artist,
       config
     );

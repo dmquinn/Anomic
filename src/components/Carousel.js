@@ -11,7 +11,7 @@ function Slides({ artists }) {
           <Carousel
             autoPlay={true}
             infiniteLoop
-            interval="5000"
+            interval="3000"
             transitionTime="1000"
             dynamicHeight={true}
           >

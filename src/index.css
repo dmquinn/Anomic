@@ -1,12 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Rowdies&display=swap");
-@import "./stylesheets/ArtistCard.css";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans:wght@600&display=swap");
+@import "~inga-ui/index.css";
+* {
+  /* font-family: "Merriweather", serif !important; */
+  letter-spacing: 0.5px !important;
+}
+#root {
+  min-height: 100vh;
+}
+section {
+  background-color: #1e212b !important;
+  border-bottom: 12px solid #1e212b;
+}
 body {
-  background-color: #1f2024;
   color: rgb(17, 17, 17);
   margin: 0;
-  font-family: "PT Sans", sans-serif;
   overflow-x: hidden;
-  height: 0px;
+  min-height: 100vh;
 }
 footer {
   color: white !important;
@@ -20,4 +29,21 @@ form {
 td,
 th {
   background-color: white !important;
+}
+.nav-link {
+  text-shadow: 2px 2px 0px rgba(172, 64, 82, 0.384);
+}
+.title {
+  text-decoration: underline pink !important;
+  font-family: "Merriweather Sans", sans-serif !important;
+}
+.fill img:hover {
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+h1 {
+  width: fit-content;
+  font-family: "Merriweather Sans", sans-serif !important;
 }

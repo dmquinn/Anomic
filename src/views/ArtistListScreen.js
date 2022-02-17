@@ -10,6 +10,7 @@ import {
   createArtist,
 } from "../actions/artistActions";
 import { ARTIST_CREATE_RESET } from "../constants/artistConstants";
+import { Link } from "react-router-dom";
 
 const ArtistListScreen = ({ history, match }) => {
   const pageNumber = match.params.pageNumber || 1;
@@ -71,49 +72,53 @@ const ArtistListScreen = ({ history, match }) => {
 
   return (
     <>
+      <Table
+        striped
+        bordered
+        hover
+        responsive
+        className="table-sm container"
+        style={{ position: "relative", zIndex: "400", marginTop: "50px" }}
+      >
+        <thead style={{ position: "relative", zIndex: "400" }}>
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          {!!artists &&
+            artists.map((artist) => (
+              <tr key={artist._id}>
+                <td>{artist._id}</td>
+                <td>{artist.name}</td>
+                <td>
+                  <Link to={`/admin/artists/${artist.name}/edit`}>
+                    <Button variant="light" className="btn-sm">
+                      <i className="fas fa-edit"></i>
+                    </Button>
+                  </Link>
+                  <Button
+                    variant="danger"
+                    className="btn-sm"
+                    onClick={() => deleteHandler(artist._id)}
+                  >
+                    <i className="fas fa-trash"></i>
+                  </Button>
+                </td>
+              </tr>
+            ))}
+        </tbody>
+      </Table>
       <Row className="align-items-center">
         <Col className="text-right">
-          <Button className="my-3" onClick={createArtistHandler}>
+          <Button className="my-3 mx-5" onClick={createArtistHandler}>
             <i className="fas fa-plus"></i> Create Artist
           </Button>
         </Col>
       </Row>
-      <>
-        <Table striped bordered hover responsive className="table-sm">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>NAME</th>
-              <th>ACTION</th>
-            </tr>
-          </thead>
-          <tbody>
-            {!!artists &&
-              artists.map((artist) => (
-                <tr key={artist._id}>
-                  <td>{artist._id}</td>
-                  <td>{artist.name}</td>
-                  <td>
-                    <LinkContainer to={`/admin/artist/${artist._id}/edit`}>
-                      <Button variant="light" className="btn-sm">
-                        <i className="fas fa-edit"></i>
-                      </Button>
-                    </LinkContainer>
-                    <Button
-                      variant="danger"
-                      className="btn-sm"
-                      onClick={() => deleteHandler(artist._id)}
-                    >
-                      <i className="fas fa-trash"></i>
-                    </Button>
-                  </td>
-                </tr>
-              ))}
-          </tbody>
-        </Table>
-        {/* <Paginate pages={pages} page={page} isAdmin={true} /> */}
-      </>
-      )
+      {/* <Paginate pages={pages} page={page} isAdmin={true} /> */})
     </>
   );
 };

@@ -4,70 +4,65 @@ import Carousel from "../components/Carousel";
 import { listArtists } from "../actions/artistActions";
 import "../stylesheets/Homepage.css";
 import { useDispatch, useSelector } from "react-redux";
+import SocialMediaRow from "../components/SocialMediaRow";
 
 const Homepage = () => {
   const dispatch = useDispatch();
   const artistList = useSelector((state) => state.artistList);
 
   const { artists } = artistList;
-  const randomArtist = artists[Math.floor(Math.random() * artists.length)];
 
+  const randomArtist = artists[Math.floor(Math.random() * artists.length)];
   useEffect(() => {
     dispatch(listArtists());
   }, [dispatch]);
-  console.log(randomArtist);
 
   return (
     <>
       <Carousel artists={artists} />
-      <div className="container d-flex justify-content-center">
-        <div className="centerPanel col-lg-10">
-          <div className="d-flex justify-content-end">
-            <a href="https://www.facebook.com/anomicrecords/">
-              <i className="fab fa-facebook-f p-3"></i>
-            </a>
-            <a href="https://www.instagram.com/anomicrecords/?hl=en">
-              <i className="fab fa-instagram p-3"></i>
-            </a>
-            <a href="https://anomicrecords.bandcamp.com/">
-              <i className="fab fa-bandcamp p-3"></i>
-            </a>
-            <a href="https://www.youtube.com/channel/UCtD0HCtxYqZyvMoR3tavQYA">
-              <i className="fab fa-youtube p-3"></i>
-            </a>
-          </div>
-          <div className="d-flex">
-            <h1 className="mt-5 mx-5 cardText">In Focus:</h1>
-          </div>
-          <div className="row w-100">
-            <div className="col-lg-5 p-5 col-sm-12 mt-lg-5 ms-lg-5">
-              {randomArtist && (
-                <>
-                  <h5 className="cardText mb-2">{randomArtist.name}</h5>
-                  <h6>{randomArtist.description}</h6>
-                </>
-              )}
-            </div>
+      <section className="blue">
+        <SocialMediaRow />
+        <div className="container bg-white mt-5 j-center mb-2 ">
+          <div className="col-sm-12 j-center">
+            <h1 className="title p-5">In Focus</h1>
             {randomArtist && (
-              <iframe
-                src={randomArtist.youtube + `?autoplay=1`}
-                title="YouTube video player"
-                frameBorder="0"
-                autoPlay="1"
-                allow="accelerometer; autoplay;"
-                allowFullScreen
-                className="mt-3 col-lg-6 p-4"
-                style={{ borderBottom: "1px solid grey", position: "relative" }}
-              ></iframe>
+              <div className="j-center">
+                {randomArtist.youtube ? (
+                  <iframe
+                    src={randomArtist.youtube}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    autoPlay="1"
+                    allow="accelerometer; autoplay;"
+                    allowFullScreen
+                    className="mt-3 col-lg-6 p-4"
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                    }}
+                  />
+                ) : (
+                  <img
+                    src={randomArtist.image}
+                    alt={randomArtist.name}
+                    className="cover w-100 h-50"
+                  />
+                )}
+              </div>
             )}
+            {randomArtist && (
+              <div className="pl-2 col-sm-12 col-md-9">
+                <h4 className="title mb-2">{randomArtist.name}</h4>
+                <h6 className="text-20 pb-5">{randomArtist.description}</h6>
+              </div>
+            )}{" "}
           </div>
-          <div className="d-flex justify-content-end mx-3 w-60">
-            <h1 className="mt-5 mx-5 cardText">Our Artists</h1>
-          </div>
-          <ArtistList artists={artists}></ArtistList>
-          <br />
         </div>
+      </section>
+      <div className="text-end">
+        <h2 className="title px-10 mt-7">Anomic Artists</h2>
       </div>
+      <ArtistList artists={artists} />
     </>
   );
 };
