@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import ArtistList from "../components/ArtistList";
-import "../stylesheets/Homepage.css";
+// import "../stylesheets/Homepage.css";
 
 function ArtistScreen(props) {
   useEffect(() => {

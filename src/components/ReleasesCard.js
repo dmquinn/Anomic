@@ -1,19 +1,17 @@
 import React from "react";
-import "../stylesheets/ReleasesCard.css";
 
 const Card = (props) => {
-	return (
-		<div className="card mt-5 d-flex">
-			<div className="card body align-items-center">
-				<img alt="" loading="lazy" src={props.image}></img>
-
-				<div className="d-flex justify-content-center mt-4 cardText">
-					<h6>{props.artist}</h6>
-					<h4 className="title">{props.title}</h4>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div className="flex container-lg">
+      <div className="h-30 recordImage">
+        <img alt="" src={props.image} className="fill"></img>
+        <div>
+          <h6 className="title text-black ml-3 mt-2">{props.name}</h6>
+          <p className="text-4 pt-2">{props.description}</p>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Card;

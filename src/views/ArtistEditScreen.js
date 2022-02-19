@@ -5,7 +5,6 @@ import { Form, Button } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 // import Message from "../components/Message";
 // import Loader from "../components/Loader";
-// import FormContainer from "../components/FormContainer";
 import { listArtistDetails, updateArtist } from "../actions/artistActions";
 import { ARTIST_UPDATE_RESET } from "../constants/artistConstants";
 import ReleaseFields from "../components/forms/AddRelease";
@@ -14,10 +13,7 @@ const ArtistEditScreen = ({ match, history }) => {
   const artistName = match.params.name;
 
   const [name, setName] = useState(artistName);
-  const [price, setPrice] = useState(0);
   const [image, setImage] = useState("");
-  const [category, setCategory] = useState("");
-  const [countInStock, setCountInStock] = useState(0);
   const [description, setDescription] = useState("");
   const [uploading, setUploading] = useState(false);
   const [release, setRelease] = useState({});
@@ -44,10 +40,7 @@ const ArtistEditScreen = ({ match, history }) => {
         dispatch(listArtistDetails(artistName));
       } else {
         setName(artist.name);
-        setPrice(artist.price);
-        setImage(artist.image[0]);
-        setCategory(artist.category);
-        setCountInStock(artist.countInStock);
+        setImage(artist.image);
         setDescription(artist.description);
       }
     }
@@ -107,7 +100,7 @@ const ArtistEditScreen = ({ match, history }) => {
         name: artistName,
         image,
         description,
-        releases: [...artistDetails.releases, release],
+        release,
       })
     );
   };
@@ -120,7 +113,6 @@ const ArtistEditScreen = ({ match, history }) => {
       <Link to="/admin/artistList" className="btn btn-light my-3">
         Go Back
       </Link>
-      {/* <FormContainer> */}
       <h1>Edit Artist - {artistName}</h1>
       {/* {loadingUpdate && <Loader />}
         {errorUpdate && <Message variant="danger">{errorUpdate}</Message>} */}
@@ -136,7 +128,6 @@ const ArtistEditScreen = ({ match, history }) => {
             disabled
             type="name"
             placeholder={artistName || "Enter name"}
-            // value={name}
             onChange={(e) => setName(e.target.value)}
           ></Form.Control>
         </Form.Group>
@@ -145,8 +136,8 @@ const ArtistEditScreen = ({ match, history }) => {
           <Form.Label>Image</Form.Label>
           <Form.Control
             type="text"
-            placeholder="Enter image url"
-            value={image}
+            placeholder={artist.image || "Enter image url"}
+            value={artist.image}
             onChange={(e) => setImage(e.target.value)}
           ></Form.Control>
           <Form.File

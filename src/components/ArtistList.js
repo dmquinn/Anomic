@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ArtistCard from "./ArtistCard";
-import "../stylesheets/ArtistList.css";
 
 const List = ({ artists }) => {
   return (
     <div className="container">
-      <div className="row list gx-0">
+      <div className="row list">
         {!!artists &&
           artists.map((artist, i) => {
             return (

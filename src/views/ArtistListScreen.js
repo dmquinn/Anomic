@@ -71,18 +71,16 @@ const ArtistListScreen = ({ history, match }) => {
   };
 
   return (
-    <>
+    <div className="container bg-black">
       <Table
         striped
-        bordered
+        // bordered
         hover
         responsive
-        className="table-sm container"
         style={{ position: "relative", zIndex: "400", marginTop: "50px" }}
       >
         <thead style={{ position: "relative", zIndex: "400" }}>
           <tr>
-            <th>ID</th>
             <th>NAME</th>
             <th>ACTION</th>
           </tr>
@@ -91,12 +89,11 @@ const ArtistListScreen = ({ history, match }) => {
           {!!artists &&
             artists.map((artist) => (
               <tr key={artist._id}>
-                <td>{artist._id}</td>
                 <td>{artist.name}</td>
                 <td>
                   <Link to={`/admin/artists/${artist.name}/edit`}>
                     <Button variant="light" className="btn-sm">
-                      <i className="fas fa-edit"></i>
+                      <i className="fas fa-edit" />
                     </Button>
                   </Link>
                   <Button
@@ -104,7 +101,7 @@ const ArtistListScreen = ({ history, match }) => {
                     className="btn-sm"
                     onClick={() => deleteHandler(artist._id)}
                   >
-                    <i className="fas fa-trash"></i>
+                    <i className="fas fa-trash" />
                   </Button>
                 </td>
               </tr>
@@ -114,12 +111,11 @@ const ArtistListScreen = ({ history, match }) => {
       <Row className="align-items-center">
         <Col className="text-right">
           <Button className="my-3 mx-5" onClick={createArtistHandler}>
-            <i className="fas fa-plus"></i> Create Artist
+            <i className="fas fa-plus text-white"></i>
           </Button>
         </Col>
       </Row>
-      {/* <Paginate pages={pages} page={page} isAdmin={true} /> */})
-    </>
+    </div>
   );
 };
 

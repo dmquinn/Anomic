@@ -24,7 +24,7 @@ const Homepage = () => {
         <SocialMediaRow />
         <div className="container bg-white mt-5 j-center mb-2 ">
           <div className="col-sm-12 j-center">
-            <h1 className="title p-5">In Focus</h1>
+            <h1 className="title p-5">In Focus:</h1>
             {randomArtist && (
               <div className="j-center">
                 {randomArtist.youtube ? (
@@ -42,11 +42,13 @@ const Homepage = () => {
                     }}
                   />
                 ) : (
-                  <img
-                    src={randomArtist.image}
-                    alt={randomArtist.name}
-                    className="cover w-100 h-50"
-                  />
+                  <div className="h-46">
+                    <img
+                      src={randomArtist.image}
+                      alt={randomArtist.name}
+                      className="cover w-100 fill"
+                    />
+                  </div>
                 )}
               </div>
             )}
