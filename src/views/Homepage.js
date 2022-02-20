@@ -9,10 +9,12 @@ import SocialMediaRow from "../components/SocialMediaRow";
 const Homepage = () => {
   const dispatch = useDispatch();
   const artistList = useSelector((state) => state.artistList);
-
+  let randomArtist;
   const { artists } = artistList;
+  if (artistList) {
+    randomArtist = artists[Math.floor(Math.random() * artists.length)];
+  }
 
-  const randomArtist = artists[Math.floor(Math.random() * artists.length)];
   useEffect(() => {
     dispatch(listArtists());
   }, [dispatch]);
