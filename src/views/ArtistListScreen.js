@@ -60,9 +60,9 @@ const ArtistListScreen = ({ history, match }) => {
     pageNumber,
   ]);
 
-  const deleteHandler = (id) => {
+  const deleteHandler = (name) => {
     if (window.confirm("Are you sure")) {
-      dispatch(deleteArtist(id));
+      dispatch(deleteArtist(name));
     }
   };
 

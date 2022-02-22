@@ -21,7 +21,7 @@ const getArtistById = asyncHandler(async (req, res) => {
   }
 });
 const deleteArtist = asyncHandler(async (req, res) => {
-  const artist = await Artist.findById(req.params.id);
+  const artist = await Artist.findById(req.params.name);
   if (artist) {
     await artist.remove();
     res.json({ message: "artist removed" });

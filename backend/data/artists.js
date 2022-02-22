@@ -1,17 +1,5 @@
 const artists = [
   {
-    name: "Kick",
-    description:
-      "KICK are Chiara Amalia Bernardini (vocals, bass) and Nicola Mora (guitars, electric piano, synths, samplers), from Brescia. Their sound combines rough elements and others more dreamy in a sound that could ideally be defined as “sweet noise”, a style on their own melting the noise with the softness of the atmosphere, without any limits of genre.\n The first single Setting Tina, out on July 5th, 2021, sees as a guest on bass Scott Reeder, long-time member of Kyuss and currently of Fireball Ministry.\n Bernardini’s lyrics, for the first time not only in English but in some tracks also in Italian, focus both on the recurring theme of love and on social issues. Very active also live, both in Italy and abroad",
-    image:
-      "https://res.cloudinary.com/drpdq0pui/image/upload/v1643996926/Anomic/kick_i2oijh.jpg",
-    facebook: "https://www.facebook.com/kickoffizial",
-    instagram: "https://www.instagram.com/kick.offizial",
-    bandcamp: "https://kick.bandcamp.com/",
-    youtube: "https://www.youtube.com/embed/knAYOVrTf58",
-    releases: [],
-  },
-  {
     name: "Nico Novak",
     description:
       "Niko Novak is known to many as the singer of the punk rock band Dicky B. Hardy back in his hometown Ljubljana, Slovenia. The band released 3 albums and toured all over Europe and in the United States twice.\n But this was back in 1994 until 2001. Now he lives in Berlin and has been releasing 4 full-length albums with the spaced-out blues duo Incurabili and another four under his own name.\nTogether with the albums from his solo career comes a book with all the lyrics from the albums. This is not surprising as the lyrical content is a very important part of his music.\nHis dark and haunting voice tells reflections and stories that are sung over the minimalistic strumming on his electric bass guitar.\nThe music could have been taken directly from a 1960’s black and white avant-garde movie and makes the listener stop whatever they are doing and pay attention.\nHis songs might not be the best choice for a Saturday night in a packed bar but as said in his own words: The songs are mostly about sitting in bars, drinking beer.",
@@ -21,6 +9,18 @@ const artists = [
     youtube: "https://www.youtube.com/embed/54b3pYMrxuc",
     spotify:
       "https://open.spotify.com/artist/5ts1VVN9XDfZkCPoV4RG8D?si=SS1ft1e_TgSzP6UW_uuvUw",
+    releases: [],
+  },
+  {
+    name: "Kick",
+    description:
+      "KICK are Chiara Amalia Bernardini (vocals, bass) and Nicola Mora (guitars, electric piano, synths, samplers), from Brescia. Their sound combines rough elements and others more dreamy in a sound that could ideally be defined as “sweet noise”, a style on their own melting the noise with the softness of the atmosphere, without any limits of genre.\n The first single Setting Tina, out on July 5th, 2021, sees as a guest on bass Scott Reeder, long-time member of Kyuss and currently of Fireball Ministry.\n Bernardini’s lyrics, for the first time not only in English but in some tracks also in Italian, focus both on the recurring theme of love and on social issues. Very active also live, both in Italy and abroad",
+    image:
+      "https://res.cloudinary.com/drpdq0pui/image/upload/v1643996926/Anomic/kick_i2oijh.jpg",
+    facebook: "https://www.facebook.com/kickoffizial",
+    instagram: "https://www.instagram.com/kick.offizial",
+    bandcamp: "https://kick.bandcamp.com/",
+    youtube: "https://www.youtube.com/embed/knAYOVrTf58",
     releases: [],
   },
   {

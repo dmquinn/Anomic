@@ -4,12 +4,12 @@ import ArtistCard from "./ArtistCard";
 
 const List = ({ artists }) => {
   return (
-    <div className="container">
-      <div className="row list">
+    <>
+      <div className="container">
         {!!artists &&
           artists.map((artist, i) => {
             return (
-              <div className="col-sm-12 p-5" key={i}>
+              <div className="p-5" key={i}>
                 <Link to={`artists/${artist.name}`}>
                   <ArtistCard artist={artist} key={artist._id}></ArtistCard>
                 </Link>
@@ -17,7 +17,7 @@ const List = ({ artists }) => {
             );
           })}
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,12 +1,21 @@
 import React, { useEffect } from "react";
 import ArtistList from "../components/ArtistList";
-// import "../stylesheets/Homepage.css";
+import { listArtists } from "../actions/artistActions";
+import { useDispatch, useSelector } from "react-redux";
 
-function ArtistScreen(props) {
+const ArtistScreen = () => {
+  const dispatch = useDispatch();
+  const artistList = useSelector((state) => state.artistList);
+  const { artists } = artistList;
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  return <div className="d-flex justify-content-center"></div>;
-}
+    dispatch(listArtists());
+  }, [dispatch]);
+  artists && console.log(artists);
+  return (
+    <div className="col-md-4">
+      <ArtistList artists={artists} />
+    </div>
+  );
+};
 export default ArtistScreen;

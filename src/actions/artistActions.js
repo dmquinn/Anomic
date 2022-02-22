@@ -57,7 +57,7 @@ export const listArtistDetails = (name) => async (dispatch) => {
     });
   }
 };
-export const deleteArtist = (id) => async (dispatch, getState) => {
+export const deleteArtist = (name) => async (dispatch, getState) => {
   try {
     dispatch({
       type: ARTIST_DELETE_REQUEST,
@@ -69,11 +69,11 @@ export const deleteArtist = (id) => async (dispatch, getState) => {
 
     const config = {
       headers: {
-        Authorization: `Bearer {userInfo.token}`,
+        Authorization: `Bearer ${userInfo.token}`,
       },
     };
 
-    await axios.delete(`/api/artists/${id}`, config);
+    await axios.delete(`/api/artists/${name}`, config);
 
     dispatch({
       type: ARTIST_DELETE_SUCCESS,

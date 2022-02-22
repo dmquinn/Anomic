@@ -14,7 +14,7 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="ml-auto">
           <Nav className="ml-auto">
-            <Nav.Link href="/">Artists</Nav.Link>
+            <Nav.Link href="/all-artists">Artists</Nav.Link>
             <Nav.Link href="/releases">Releases</Nav.Link>
             <Nav.Link href="/events">Upcoming</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>

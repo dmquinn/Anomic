@@ -44,7 +44,7 @@ const Homepage = () => {
                     }}
                   />
                 ) : (
-                  <div className="h-46">
+                  <div className="h-46 pb-5">
                     <img
                       src={randomArtist.image}
                       alt={randomArtist.name}
@@ -55,9 +55,11 @@ const Homepage = () => {
               </div>
             )}
             {randomArtist && (
-              <div className="pl-2 col-sm-12 col-md-9">
-                <h4 className="title mb-2">{randomArtist.name}</h4>
-                <h6 className="text-20 pb-5">{randomArtist.description}</h6>
+              <div className="row j-center">
+                <div className="pl-2 col-sm-12 col-md-10 j-center">
+                  <h4 className="title mb-2 ml--5">{randomArtist.name}</h4>
+                  <h6 className="text-20 pb-5">{randomArtist.description}</h6>
+                </div>
               </div>
             )}{" "}
           </div>
@@ -66,7 +68,9 @@ const Homepage = () => {
       <div className="text-end">
         <h2 className="title px-10 mt-7">Anomic Artists</h2>
       </div>
-      <ArtistList artists={artists} />
+      <div className="col-sm-12 p-5 pb-5">
+        <ArtistList artists={artists} />
+      </div>
     </>
   );
 };

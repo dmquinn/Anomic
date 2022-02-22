@@ -11,7 +11,6 @@ import ReleaseFields from "../components/forms/AddRelease";
 
 const ArtistEditScreen = ({ match, history }) => {
   const artistName = match.params.name;
-  console.log(match);
   const [name, setName] = useState(artistName);
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
