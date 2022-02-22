@@ -43,7 +43,6 @@ export const listArtistDetails = (name) => async (dispatch) => {
     dispatch({ type: ARTIST_DETAILS_REQUEST });
     const res = await fetch(`/api/artists/${name}`);
     const data = await res.json();
-    console.log("data", data);
     dispatch({
       type: ARTIST_DETAILS_SUCCESS,
       payload: data,

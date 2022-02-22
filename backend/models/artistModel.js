@@ -2,14 +2,13 @@ const mongoose = require("mongoose");
 const releasesSchema = mongoose.Schema(
   {
     name: { type: String, required: true },
-    releaseDate: { type: Date, required: false },
     description: { type: String, required: false },
     image: {
       type: String,
       required: false,
     },
     artist: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.Mixed,
       required: true,
       ref: "Artist",
     },

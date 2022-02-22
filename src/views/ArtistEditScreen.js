@@ -11,12 +11,17 @@ import ReleaseFields from "../components/forms/AddRelease";
 
 const ArtistEditScreen = ({ match, history }) => {
   const artistName = match.params.name;
-
+  console.log(match);
   const [name, setName] = useState(artistName);
   const [image, setImage] = useState("");
   const [description, setDescription] = useState("");
   const [uploading, setUploading] = useState(false);
-  const [release, setRelease] = useState({});
+  const [release, setRelease] = useState({
+    description: "",
+    artist: artistName,
+    image: "",
+    name: "",
+  });
 
   const dispatch = useDispatch();
 
@@ -31,7 +36,6 @@ const ArtistEditScreen = ({ match, history }) => {
   } = artistUpdate;
 
   useEffect(() => {
-    artistDetails && console.log(artistDetails);
     if (successUpdate) {
       dispatch({ type: ARTIST_UPDATE_RESET });
       history.push("/");
@@ -93,7 +97,6 @@ const ArtistEditScreen = ({ match, history }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(release);
 
     dispatch(
       updateArtist({

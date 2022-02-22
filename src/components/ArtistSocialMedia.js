@@ -1,7 +1,6 @@
 import React from "react";
 
 const ArtistSocialMedia = (artist) => {
-  console.log(artist.artist);
   return (
     <div className="mx-4 mt-5 color-black">
       {artist.artist.facebook && (

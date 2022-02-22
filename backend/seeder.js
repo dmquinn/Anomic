@@ -10,7 +10,6 @@ const connectDB = require("./config/db");
 connectDB();
 
 const importData = async () => {
-  console.log(artists);
   try {
     await Artist.deleteMany();
     await User.deleteMany();

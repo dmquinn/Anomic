@@ -11,7 +11,6 @@ import {
 } from "../constants/userConstants";
 
 export const login = (email, password) => async (dispatch) => {
-  console.log(email, password);
   try {
     dispatch({
       type: USER_LOGIN_REQUEST,

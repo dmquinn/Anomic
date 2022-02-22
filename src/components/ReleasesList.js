@@ -2,7 +2,6 @@ import React from "react";
 import ReleasesCard from "../components/ReleasesCard";
 
 const List = ({ releases }) => {
-  console.log("releases", releases);
   return (
     <div className="container ">
       <div className="row releasesList ">

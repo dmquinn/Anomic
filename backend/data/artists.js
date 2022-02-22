@@ -9,6 +9,7 @@ const artists = [
     instagram: "https://www.instagram.com/kick.offizial",
     bandcamp: "https://kick.bandcamp.com/",
     youtube: "https://www.youtube.com/embed/knAYOVrTf58",
+    releases: [],
   },
   {
     name: "Nico Novak",
@@ -20,6 +21,7 @@ const artists = [
     youtube: "https://www.youtube.com/embed/54b3pYMrxuc",
     spotify:
       "https://open.spotify.com/artist/5ts1VVN9XDfZkCPoV4RG8D?si=SS1ft1e_TgSzP6UW_uuvUw",
+    releases: [],
   },
   {
     name: "Errorr",
@@ -33,6 +35,7 @@ const artists = [
     youtube: "https://www.youtube.com/embed/AJDtj7YB_B8",
     spotify:
       "https://open.spotify.com/artist/1wVtzjX6YlqkRrdTEDyaRr?si=SWzJklS5SlG5yeLnHz8bZw",
+    releases: [],
   },
   {
     name: "Dada Jung Riley",
@@ -44,6 +47,7 @@ const artists = [
     instagram: "https://www.instagram.com/dadajungriley/",
     bandcamp: "https://dadajungriley.bandcamp.com/",
     youtube: "",
+    releases: [],
   },
   {
     name: "Wombed",
@@ -56,6 +60,7 @@ const artists = [
     youtube: "https://www.youtube.com/embed/r_H2LVJ_3Ro",
     spotify:
       "https://open.spotify.com/artist/22y4Qm240at3mEwWcylFiC?si=YjQINRlfTHCaUNUGVZR9CA",
+    releases: [],
   },
   {
     name: "Kaery Ann",
@@ -65,6 +70,7 @@ const artists = [
       "https://res.cloudinary.com/drpdq0pui/image/upload/v1643996926/Anomic/ann_tm1whp.png",
     facebook: "https://www.facebook.com/kaeryann",
     instagram: "https://www.instagram.com/kaery.ann/",
+    releases: [],
   },
   {
     name: "Jawbones",
@@ -76,6 +82,7 @@ const artists = [
     facebook: "https://www.facebook.com/jawbonesmusic",
     bandcamp: "https://jawbonesmusic.bandcamp.com/releases",
     youtube: "https://www.youtube.com/embed/Jae1d5wTlrc",
+    releases: [],
   },
   {
     name: "Hausband",
@@ -86,6 +93,7 @@ const artists = [
     youtube: "https://www.youtube.com/embed/wJ3EmISFW9Y",
     spotify:
       "https://open.spotify.com/track/0vUwlj0EttaRPs7lEIyswg?si=2eee2926e3e84298",
+    releases: [],
   },
   {
     name: "San Marino",
@@ -95,6 +103,7 @@ const artists = [
     spotify:
       "https://open.spotify.com/album/5Ipm13ZOwA93Gjmi48V1WE?si=AU68LH4gR_GuFLDvSEhUHw",
     youtube: "https://www.youtube.com/embed/B2Y2lsuyfSY",
+    releases: [],
   },
   {
     name: "Camel Moon",
@@ -106,6 +115,7 @@ const artists = [
     spotify:
       "https://open.spotify.com/artist/0SKXsOq74aPd9iBm8c4kq2?si=JoyToPSqTVOGKSa90743bA",
     youtube: "https://www.youtube.com/embed/nUzTdtJLGuI",
+    releases: [],
   },
 ];
 

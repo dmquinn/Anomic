@@ -5,7 +5,6 @@ const User = require("../models/userModel.js");
 const authUser = asyncHandler(async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
-  console.log("hello", user);
 
   if (user && (await user.matchPassword(password))) {
     res.json({
@@ -15,7 +14,6 @@ const authUser = asyncHandler(async (req, res) => {
       isAdmin: user.isAdmin,
       token: generateToken(user._id),
     });
-    console.log("user", user);
   } else {
     res.status(401);
     throw new Error("Invalid email or password");

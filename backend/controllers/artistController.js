@@ -44,14 +44,16 @@ const createArtist = asyncHandler(async (req, res) => {
 });
 const updateArtist = asyncHandler(async (req, res) => {
   const { name, description, image, release } = req.body;
-  console.log("requesrt", req.body);
 
   const artist = await Artist.findOne({ name: req.params.name });
   if (artist) {
     artist.name = name;
     artist.description = description;
     artist.image = image;
-    await Artist.updateOne({ name: req.params.name, releases: release });
+    await Artist.updateOne(
+      { name: req.params.name },
+      { $push: { releases: release } }
+    );
     const updatedArtist = await artist.save();
     res.json(updatedArtist);
   } else {

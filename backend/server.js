@@ -7,6 +7,7 @@ const userRoutes = require("./routes/userRoutes");
 const uploadRoutes = require("./routes/uploadRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const morgan = require("morgan");
+const bodyParser = require("body-parser");
 
 dotenv.config();
 connectDB();
@@ -15,7 +16,8 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 app.use(express.json());
-
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use("/api/artists", artistRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/upload", uploadRoutes);
