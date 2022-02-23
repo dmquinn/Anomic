@@ -19,12 +19,14 @@ function ArtistScreen({ match }) {
     <>
       {artistDetails && (
         <>
-          <img
-            className="fill w-100"
-            src={artistDetails.artist.image}
-            alt=""
-            style={{ height: "550px" }}
-          />
+          <div className="gradientContainer">
+            <img
+              className="fill w-100 gradient"
+              src={artistDetails.artist.image}
+              alt=""
+              style={{ height: "550px" }}
+            />
+          </div>
           <div className="">
             <h1 className="mt--6 p-3 bg-pink-light ml-2">
               {artistDetails.artist.name}

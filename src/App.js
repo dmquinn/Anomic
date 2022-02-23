@@ -10,11 +10,14 @@ import EventsScreen from "./views/EventsScreen";
 import LoginScreen from "./views/LoginScreen";
 import ArtistEditScreen from "./views/ArtistEditScreen";
 import ArtistListScreen from "./views/ArtistListScreen";
+import { useState } from "react";
 
 const App = () => {
+  const [modal, setModal] = useState(false);
+
   return (
     <Router>
-      <Header />
+      <Header modal={modal} setModal={setModal} />{" "}
       <Route path="/" component={Homepage} exact />
       <Route path="/releases" component={ReleasesScreen} />
       <Route path="/all-artists" component={ArtistsScreen} />
