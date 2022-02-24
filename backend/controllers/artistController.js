@@ -62,7 +62,6 @@ const updateArtist = asyncHandler(async (req, res) => {
     throw new Error("Artist not found");
   }
 });
-//test push command
 module.exports = {
   getArtists,
   getArtistById,
