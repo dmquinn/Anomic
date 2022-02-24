@@ -15,7 +15,7 @@ const Header = ({ setModal, modal }) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav" className="ml-auto">
           <Nav className="ml-auto">
-            <Nav.Link onClick={() => setModal(true)}>Artists</Nav.Link>
+            <Nav.Link href="/all-artists">Artists</Nav.Link>
             <Nav.Link href="/releases">Releases</Nav.Link>
             <Nav.Link href="/events">Upcoming</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>

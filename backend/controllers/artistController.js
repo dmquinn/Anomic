@@ -4,7 +4,7 @@ const Artist = require("../models/artistModel");
 const getArtists = asyncHandler(async (req, res) => {
   const artists = await Artist.find({});
   if (artists) {
-    res.json({ artists });
+    res.status(308).json({ artists });
   } else {
     res.status(404);
     throw new Error("Artists not found");
@@ -43,7 +43,7 @@ const createArtist = asyncHandler(async (req, res) => {
   res.status(201).json(createdArtist);
 });
 const updateArtist = asyncHandler(async (req, res) => {
-  const { name, description, image, release } = req.body;
+  const { name, description, image, release } = req.body.artist;
 
   const artist = await Artist.findOne({ name: req.params.name });
   if (artist) {
@@ -54,8 +54,9 @@ const updateArtist = asyncHandler(async (req, res) => {
       { name: req.params.name },
       { $push: { releases: release } }
     );
-    const updatedArtist = await artist.save();
-    res.json(updatedArtist);
+    await artist.save();
+    const updatedArtist = await Artist.findOne({ name: req.params.name });
+    res.status(200).json(updatedArtist);
   } else {
     res.status(404);
     throw new Error("Artist not found");

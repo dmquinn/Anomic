@@ -138,13 +138,11 @@ export const updateArtist = (artist) => async (dispatch, getState) => {
         Authorization: `Bearer ${userInfo.token}`,
       },
     };
-
     const { data } = await axios.put(
       `/api/artists/${artist.name}`,
-      artist,
+      { artist: artist },
       config
     );
-
     dispatch({
       type: ARTIST_UPDATE_SUCCESS,
       payload: data,

@@ -47,7 +47,7 @@ const ArtistEditScreen = ({ match, history }) => {
         setDescription(artist.description);
       }
     }
-  }, [dispatch, history, artistName, successUpdate, artistDetails]);
+  }, [dispatch, history, artistName, successUpdate, artist]);
 
   const uploadFileHandler = async (e) => {
     const file = e.target.files[0];
@@ -72,6 +72,7 @@ const ArtistEditScreen = ({ match, history }) => {
     }
   };
   const uploadReleaseFileHandler = async (e) => {
+    e.preventDefault();
     const file = e.target.files[0];
     const formData = new FormData();
     formData.append("image", file);

@@ -44,7 +44,7 @@ app.get("/api/artists", (req, res) => {
 });
 app.get("/api/artists/:name", (req, res) => {
   const artist = res.find((p) => p.name === req.params.name);
-  res.json("apires", res);
+  res.status(200).json(res);
 });
 const PORT = process.env.PORT || 5000;
 app.listen(

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import ArtistList from "../components/ArtistList";
+import ArtistCard from "../components/ArtistCard";
 import { listArtists } from "../actions/artistActions";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -11,11 +11,29 @@ const ArtistScreen = () => {
   useEffect(() => {
     dispatch(listArtists());
   }, [dispatch]);
-  artists && console.log(artists);
   return (
-    <div className="col-md-4">
-      <ArtistList artists={artists} />
-    </div>
+    <>
+      <div className="h-5 bg-black" />
+      <div className="container">
+        <div className="row mt-5">
+          {artists &&
+            artists.map((artist, i) => {
+              return (
+                <div className="col-sm-12 col-md-3 p-2">
+                  <div className="h-20 p-2">
+                    <img
+                      src={artist.image}
+                      className="fill"
+                      alt={artist.name}
+                    />{" "}
+                    <p className="mt--2 title text-white">{artist.name}</p>
+                  </div>
+                </div>
+              );
+            })}{" "}
+        </div>
+      </div>
+    </>
   );
 };
 export default ArtistScreen;
