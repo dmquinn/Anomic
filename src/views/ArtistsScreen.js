@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import ArtistCard from "../components/ArtistCard";
 import { listArtists } from "../actions/artistActions";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -15,9 +14,9 @@ const ArtistScreen = () => {
     <>
       <div className="h-5 bg-black" />
       <div className="container">
-        <div className="row mt-5">
+        <div className="row mt-10">
           {artists &&
-            artists.map((artist, i) => {
+            artists.map((artist) => {
               return (
                 <div className="col-sm-12 col-md-3 p-2">
                   <div className="h-20 p-2">

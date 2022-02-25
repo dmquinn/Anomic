@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Nav, Navbar } from "react-bootstrap";
 import Logo from "../logo.svg";
 import "../stylesheets/Header.css";
-import ArtistsModal from "./ArtistsModal";
 
-const Header = ({ setModal, modal }) => {
+const Header = () => {
   return (
     <header>
       <a href="/">
@@ -22,7 +21,6 @@ const Header = ({ setModal, modal }) => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <ArtistsModal modal={modal} setModal={setModal} />
     </header>
   );
 };

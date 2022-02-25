@@ -6,16 +6,16 @@ const List = ({ artists }) => {
   return (
     <>
       <div className="container">
-        {!!artists &&
-          artists.map((artist, i) => {
-            return (
-              <div className="p-5" key={i}>
+        <div className="row">
+          {!!artists &&
+            artists.map((artist, i) => {
+              return (
                 <Link to={`artists/${artist.name}`}>
                   <ArtistCard artist={artist} key={artist._id}></ArtistCard>
                 </Link>
-              </div>
-            );
-          })}
+              );
+            })}
+        </div>
       </div>
     </>
   );

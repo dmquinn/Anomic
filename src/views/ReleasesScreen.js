@@ -1,38 +1,43 @@
 import React, { useEffect } from "react";
-import ReleasesList from "../components/ReleasesList";
-import releases from "../releases";
+import { listArtists } from "../actions/artistActions";
+import { useDispatch, useSelector } from "react-redux";
 
-function Releases() {
+const Releases = () => {
+  const dispatch = useDispatch();
+  const artistList = useSelector((state) => state.artistList);
+  const { artists } = artistList;
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    dispatch(listArtists());
+  }, [dispatch]);
   return (
-    <div className="d-flex justify-content-center">
-      <div className="centerPanel col-lg-10 ">
-        <div
-          className="d-flex w-100 justify-content-center"
-          style={{
-            position: "relative",
-            height: "100px",
-            width: "150%",
-            // marginLeft: "-120px",
-            backgroundColor: "#001427",
-            border: "none",
-          }}
-        ></div>
-        <div className="d-flex justify-content-end mt-5">
-          {" "}
-          <h1 className=" boxedText mx-3">Releases</h1>
-        </div>
-
-        <div className="d-flex justify-content-center">
-          <div className="centerPanel col-lg-10">
-            <ReleasesList releases={releases} />
-          </div>
+    <>
+      <div className="h-5 bg-black" />
+      <div className="container">
+        <div className="row mt-10">
+          {artists &&
+            artists.map((artist) => {
+              return artist.releases.map((release) => {
+                return (
+                  <div
+                    className="h-20 p-2 col-sm-12 col-md-6 col-lg-3"
+                    key={release._id}
+                  >
+                    <img
+                      src={release.image}
+                      className="fill bg-black"
+                      alt={release.name}
+                    />{" "}
+                    <h4 className="mt--2 text-white">{release.artist}</h4>
+                    <h6 className="mt--3 title text-white">{release.name}</h6>
+                  </div>
+                );
+              });
+            })}{" "}
         </div>
       </div>
-    </div>
+    </>
   );
-}
+};
 
 export default Releases;

@@ -100,7 +100,7 @@ const ArtistEditScreen = ({ match, history }) => {
 
     dispatch(
       updateArtist({
-        name: artistName,
+        name,
         image,
         description,
         release,
@@ -128,7 +128,6 @@ const ArtistEditScreen = ({ match, history }) => {
         <Form.Group controlId="name">
           <Form.Label>Name</Form.Label>
           <Form.Control
-            disabled
             type="name"
             placeholder={artistName || "Enter name"}
             onChange={(e) => setName(e.target.value)}
@@ -140,7 +139,7 @@ const ArtistEditScreen = ({ match, history }) => {
           <Form.Control
             type="text"
             placeholder={artist.image || "Enter image url"}
-            value={artist.image}
+            value={image}
             onChange={(e) => setImage(e.target.value)}
           ></Form.Control>
           <Form.File

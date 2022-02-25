@@ -75,20 +75,6 @@ iframe {
   height: 600px;
   width: 100%;
 }
-.modal-content {
-  width: 250% !important;
-  right: 70% !important;
-  top: 50px;
-  /* border: 14px solid white; */
-  background-color: black !important;
-}
-.close {
-  border: none;
-  position: absolute !important;
-  z-index: 10 !important;
-  left: -5px;
-  top: -30px !important;
-}
 .fade {
   background-color: rgba(0, 0, 0, 0.678) !important;
 }
@@ -122,10 +108,5 @@ iframe {
   iframe {
     padding: 0;
     height: 400px;
-  }
-  .modal-content {
-    width: 100% !important;
-    right: 0 !important;
-    top: 100px;
   }
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { LinkContainer } from "react-router-bootstrap";
 import { Table, Button, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
@@ -13,8 +13,7 @@ import { ARTIST_CREATE_RESET } from "../constants/artistConstants";
 import { Link } from "react-router-dom";
 
 const ArtistListScreen = ({ history, match }) => {
-  const pageNumber = match.params.pageNumber || 1;
-
+  const [artistName, setArtistName] = useState("");
   const dispatch = useDispatch();
 
   const artistList = useSelector((state) => state.artistList);
@@ -46,9 +45,9 @@ const ArtistListScreen = ({ history, match }) => {
     }
 
     if (successCreate) {
-      history.push(`/admin/artists/${createdArtist._id}/edit`);
+      history.push(`/admin/artists/${createdArtist.name}/edit`);
     } else {
-      dispatch(listArtists("", pageNumber));
+      dispatch(listArtists());
     }
   }, [
     dispatch,
@@ -57,7 +56,6 @@ const ArtistListScreen = ({ history, match }) => {
     successDelete,
     successCreate,
     createdArtist,
-    pageNumber,
   ]);
 
   const deleteHandler = (name) => {
@@ -67,11 +65,23 @@ const ArtistListScreen = ({ history, match }) => {
   };
 
   const createArtistHandler = () => {
-    dispatch(createArtist());
+    dispatch(createArtist(artistName));
   };
 
   return (
     <div className="container bg-black">
+      <Row className="text-end mt-10">
+        <Col>
+          <span className="text-white px-3">Create New Artist</span>
+          <input
+            placeholder="Insert Artist Name"
+            onChange={(e) => setArtistName(e.target.value)}
+          />
+          <Button className="my-3 mx-5" onClick={createArtistHandler}>
+            <i className="fas fa-plus text-white"></i>
+          </Button>
+        </Col>
+      </Row>
       <Table
         striped
         // bordered
@@ -92,9 +102,9 @@ const ArtistListScreen = ({ history, match }) => {
                 <td>{artist.name}</td>
                 <td>
                   <Link to={`/admin/artists/${artist.name}/edit`}>
-                    <Button variant="light" className="btn-sm">
+                    <button variant="light" className="btn-sm">
                       <i className="fas fa-edit" />
-                    </Button>
+                    </button>
                   </Link>
                   <Button
                     variant="danger"
@@ -108,13 +118,6 @@ const ArtistListScreen = ({ history, match }) => {
             ))}
         </tbody>
       </Table>
-      <Row className="align-items-center">
-        <Col className="text-right">
-          <Button className="my-3 mx-5" onClick={createArtistHandler}>
-            <i className="fas fa-plus text-white"></i>
-          </Button>
-        </Col>
-      </Row>
     </div>
   );
 };

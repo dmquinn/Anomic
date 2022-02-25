@@ -68,9 +68,8 @@ const Homepage = () => {
       <div className="text-end">
         <h2 className="title px-10 mt-7">Anomic Artists</h2>
       </div>
-      <div className="col-sm-12 p-5 pb-5">
-        <ArtistList artists={artists} />
-      </div>
+      <div className="col-sm-12 p-5 pb-5"></div>
+      <ArtistList artists={artists} />
     </>
   );
 };

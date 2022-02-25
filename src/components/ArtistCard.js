@@ -1,11 +1,22 @@
 import React from "react";
 
 const Card = (artist) => {
+  console.log(window.location.href.includes("all-artists"));
   return (
-    <div className="h-60 ">
-      <img alt="" src={artist.artist.image} className="fill"></img>
-      <div>
-        <h6 className="title text-black ml-3 mt-2">{artist.artist.name}</h6>
+    <div className="col-sm-12 p-2">
+      <div
+        className={
+          !window.location.href.includes("all-artists")
+            ? "h-20 p-2"
+            : "p-2 h-60"
+        }
+      >
+        <img
+          src={artist.artist.image}
+          className="fill"
+          alt={artist.artist.name}
+        />{" "}
+        <p className="mt--2 title text-white px-2">{artist.artist.name}</p>
       </div>
     </div>
   );

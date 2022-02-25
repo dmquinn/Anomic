@@ -90,7 +90,8 @@ export const deleteArtist = (name) => async (dispatch, getState) => {
     });
   }
 };
-export const createArtist = () => async (dispatch, getState) => {
+export const createArtist = (artistName) => async (dispatch, getState) => {
+  console.log("artistName", artistName);
   try {
     dispatch({
       type: ARTIST_CREATE_REQUEST,
@@ -106,7 +107,12 @@ export const createArtist = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.post(`/api/artists/`, {}, config);
+    const { data } = await axios.post(
+      `/api/artists/`,
+      { name: artistName },
+      config
+    );
+    console.log("data", data);
 
     dispatch({
       type: ARTIST_CREATE_SUCCESS,
