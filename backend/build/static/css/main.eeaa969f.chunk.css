@@ -1,2 +1,221 @@
-@import url(https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans:wght@600&display=swap);*{letter-spacing:.5px!important}section{background-color:#1e212b!important;border-bottom:12px solid #1e212b}body{color:#111;margin:0;overflow-x:hidden;min-height:100vh}footer{color:#fff!important;text-decoration:none!important}form{margin-top:200px;padding-left:20%;padding-right:20%}td,th{background-color:#fff!important}.title{-webkit-text-decoration:underline pink!important;text-decoration:underline pink!important;font-family:"Merriweather Sans",sans-serif!important}.fill img:hover{-webkit-filter:brightness(70%);filter:brightness(70%);transition:.5s}h1{width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;font-family:"Merriweather Sans",sans-serif!important}.recordImage{object-fit:contain}i{font-size:25px;color:grey;transition:.2s;font-family:"Font Awesome 5 Brands"!important}.fas{font-family:"Font Awesome 5 Free"!important}.fas:hover{color:#464646}i:hover{color:hsla(0,0%,65.9%,.795);transition:.2s}iframe{position:relative!important;height:600px;width:100%}.fade{background-color:rgba(0,0,0,.678)!important}.thumb:hover{transition:.3s;-webkit-filter:brightness(120%);filter:brightness(120%)}.thumb:hover h2{visibility:visible}.gradientContainer .gradient .gradient:after{min-height:100%;content:"";display:block;position:absolute;top:0;bottom:0;left:0;right:0;background:linear-gradient(rgba(0,0,0,.678),transparent);z-index:99}.fullScreen{min-height:100vh}@media (max-width:768px){iframe{padding:0;height:400px}.artistCard{height:250px}}header{z-index:3}header .navbar{position:absolute;top:20px;right:30px;background-color:rgba(119,34,34,0)!important}header .navbar .nav-link{color:#fff!important;font-size:2rem;margin-left:20px;font-family:"Merriweather Sans",sans-serif!important}header .navbar .nav-link:hover{border-bottom:4px solid pink;transition:0s}.logo{opacity:1%;position:absolute;z-index:3;left:40px;top:40px;height:200px;transition:.5s;width:auto}.navbar-toggler{position:relative;transition:.5s;border-radius:0;border:none}.navbar-toggler:active,.navbar-toggler:focus{outline:none;box-shadow:none}@media screen and (max-width:991px){.logo{height:85px;top:10px;left:10px}.nav-link{background-color:#000;text-align:center;text-shadow:none;border:1px solid #000;left:30px;width:270px}}.carouselContainer{height:100vh;width:100vw}.carouselContainer .carousel{height:100vh;overflow:hidden}.carouselContainer .carousel .carousel-item img{width:100vw;height:100vh;object-fit:cover;object-position:50% 50%;background-blend-mode:multiply}.carouselContainer .carousel button{height:0;visibility:hidden}.carouselContainer .carousel .thumbs{visibility:hidden}.carouselContainer .carousel .carousel:after{min-height:100%;content:"";display:block;position:absolute;top:0;bottom:0;left:0;right:0;background:linear-gradient(rgba(0,0,0,.678),transparent)}.carouselContainer .carousel .legend{position:absolute;left:300px;background-color:rgba(255,192,229,0);opacity:1;width:200px;font-size:1.4em;padding:20px;border-radius:0;-webkit-clip-path:polygon(0 1%,100% 0,100% 80%,75% 100%,0 100%,0 50%);clip-path:polygon(0 1%,100% 0,100% 80%,75% 100%,0 100%,0 50%)}.carouselContainer .carousel .control-dots{position:absolute;left:40%}.carouselContainer .carousel .carousel-status{visibility:hidden}.carousel .slide img{object-fit:cover;height:100vh;width:100vw}@media screen and (max-width:768px){.carousel,.carousel-root{height:200px}}
+@import url(https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans:wght@600&display=swap);
+* {
+  letter-spacing: 0.5px !important;
+}
+section {
+  background-color: #1e212b !important;
+  border-bottom: 12px solid #1e212b;
+}
+body {
+  color: #111;
+  margin: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+footer {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+form {
+  margin-top: 200px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+td,
+th {
+  background-color: #fff !important;
+}
+.title {
+  -webkit-text-decoration: underline pink !important;
+  text-decoration: underline pink !important;
+  font-family: "Merriweather Sans", sans-serif !important;
+}
+.fill img:hover {
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
+  transition: 0.5s;
+}
+h1 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Merriweather Sans", sans-serif !important;
+}
+.recordImage {
+  object-fit: contain;
+}
+i {
+  font-size: 25px;
+  color: grey;
+  transition: 0.2s;
+  font-family: "Font Awesome 5 Brands" !important;
+}
+.fas {
+  font-family: "Font Awesome 5 Free" !important;
+}
+.fas:hover {
+  color: #464646;
+}
+i:hover {
+  color: hsla(0, 0%, 65.9%, 0.795);
+  transition: 0.2s;
+}
+iframe {
+  position: relative !important;
+  height: 600px;
+  width: 100%;
+}
+.fade {
+  background-color: rgba(0, 0, 0, 0.678) !important;
+}
+.thumb:hover {
+  transition: 0.3s;
+  -webkit-filter: brightness(120%);
+  filter: brightness(120%);
+}
+.thumb:hover h2 {
+  visibility: visible;
+}
+.gradientContainer .gradient .gradient:after {
+  min-height: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.678), transparent);
+  z-index: 99;
+}
+.fullScreen {
+  min-height: 100vh;
+}
+@media (max-width: 768px) {
+  iframe {
+    padding: 0;
+    height: 400px;
+  }
+  .artistCard {
+    height: 250px;
+  }
+}
+header {
+  z-index: 3;
+}
+header .navbar {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background-color: rgba(119, 34, 34, 0) !important;
+}
+header .navbar .nav-link {
+  color: #fff !important;
+  font-size: 2rem;
+  margin-left: 20px;
+  font-family: "Merriweather Sans", sans-serif !important;
+}
+header .navbar .nav-link:hover {
+  border-bottom: 4px solid pink;
+  transition: 0s;
+}
+.logo {
+  opacity: 90%;
+  position: absolute;
+  z-index: 3;
+  left: 40px;
+  top: 40px;
+  height: 200px;
+  transition: 0.5s;
+  width: auto;
+}
+.navbar-toggler {
+  position: relative;
+  transition: 0.5s;
+  border-radius: 0;
+  border: none;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+@media screen and (max-width: 991px) {
+  .logo {
+    height: 85px;
+    top: 10px;
+    left: 10px;
+  }
+  .nav-link {
+    background-color: #000;
+    text-align: center;
+    text-shadow: none;
+    border: 1px solid #000;
+    left: 30px;
+    width: 270px;
+  }
+}
+.carouselContainer {
+  height: 100vh;
+  width: 100vw;
+}
+.carouselContainer .carousel {
+  height: 100vh;
+  overflow: hidden;
+}
+.carouselContainer .carousel .carousel-item img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 50% 50%;
+  background-blend-mode: multiply;
+}
+.carouselContainer .carousel button {
+  height: 0;
+  visibility: hidden;
+}
+.carouselContainer .carousel .thumbs {
+  visibility: hidden;
+}
+.carouselContainer .carousel .carousel:after {
+  min-height: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.678), transparent);
+}
+.carouselContainer .carousel .legend {
+  position: absolute;
+  left: 300px;
+  background-color: rgba(255, 192, 229, 0);
+  opacity: 1;
+  width: 200px;
+  font-size: 1.4em;
+  padding: 20px;
+  border-radius: 0;
+  -webkit-clip-path: polygon(0 1%, 100% 0, 100% 80%, 75% 100%, 0 100%, 0 50%);
+  clip-path: polygon(0 1%, 100% 0, 100% 80%, 75% 100%, 0 100%, 0 50%);
+}
+.carouselContainer .carousel .control-dots {
+  position: absolute;
+  left: 40%;
+}
+.carouselContainer .carousel .carousel-status {
+  visibility: hidden;
+}
+.carousel .slide img {
+  object-fit: cover;
+  height: 100vh;
+  width: 100vw;
+}
+@media screen and (max-width: 768px) {
+  .carousel,
+  .carousel-root {
+    height: 200px;
+  }
+}
 /*# sourceMappingURL=main.eeaa969f.chunk.css.map */
