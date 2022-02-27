@@ -7,7 +7,7 @@ function Slides({ artists }) {
   return (
     <div className="carouselContainer">
       <div className="carousel">
-        {artists.length && (
+        {artists && artists.length && (
           <Carousel
             autoPlay={true}
             infiniteLoop
