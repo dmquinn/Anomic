@@ -11,7 +11,7 @@ const Homepage = () => {
   const artistList = useSelector((state) => state.artistList);
   let randomArtist;
   const { artists } = artistList;
-  if (artistList) {
+  if (artists) {
     randomArtist = artists[Math.floor(Math.random() * artists.length)];
   }
 
