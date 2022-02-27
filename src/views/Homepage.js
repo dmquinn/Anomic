@@ -14,11 +14,11 @@ const Homepage = () => {
   if (artists) {
     randomArtist = artists[Math.floor(Math.random() * artists.length)];
   }
-
+  console.log("homepage artists", artists);
   useEffect(() => {
     dispatch(listArtists());
   }, [dispatch]);
-
+  if (!artists) return null;
   return (
     <>
       <Carousel artists={artists} />

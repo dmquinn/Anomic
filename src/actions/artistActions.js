@@ -23,6 +23,7 @@ export const listArtists = () => async (dispatch) => {
     dispatch({ type: ARTIST_LIST_REQUEST });
     const response = await fetch(`/api/artists`);
     const data = await response.json();
+    console.log("actions data", data);
     dispatch({
       type: ARTIST_LIST_SUCCESS,
       payload: data,
