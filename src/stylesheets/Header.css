@@ -23,7 +23,7 @@ header .navbar .nav-link:hover {
 }
 
 .logo {
-  opacity: 90%;
+  opacity: 0.9;
   position: absolute;
   z-index: 3;
   left: 40px;
