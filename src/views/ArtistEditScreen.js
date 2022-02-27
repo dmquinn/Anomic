@@ -129,6 +129,7 @@ const ArtistEditScreen = ({ match, history }) => {
           <Form.Label>Name</Form.Label>
           <Form.Control
             type="name"
+            value={artistName}
             placeholder={artistName || "Enter name"}
             onChange={(e) => setName(e.target.value)}
           ></Form.Control>

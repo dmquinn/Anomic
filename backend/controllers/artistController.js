@@ -48,10 +48,12 @@ const updateArtist = asyncHandler(async (req, res) => {
     artist.name = name;
     artist.description = description;
     artist.image = image;
-    await Artist.updateOne(
-      { name: req.params.name },
-      { $push: { releases: release } }
-    );
+    if (release.name) {
+      await Artist.updateOne(
+        { name: req.params.name },
+        { $push: { releases: release } }
+      );
+    }
     await artist.save();
     const updatedArtist = await Artist.findOne({ name: req.params.name });
     res.status(200).json(updatedArtist);
