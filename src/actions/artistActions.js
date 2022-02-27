@@ -23,7 +23,6 @@ export const listArtists = () => async (dispatch) => {
     dispatch({ type: ARTIST_LIST_REQUEST });
     const response = await fetch(`/api/artists`);
     const data = await response.json();
-    console.log("actions data", data);
     dispatch({
       type: ARTIST_LIST_SUCCESS,
       payload: data,
@@ -92,7 +91,6 @@ export const deleteArtist = (name) => async (dispatch, getState) => {
   }
 };
 export const createArtist = (artistName) => async (dispatch, getState) => {
-  console.log("artistName", artistName);
   try {
     dispatch({
       type: ARTIST_CREATE_REQUEST,
@@ -113,8 +111,6 @@ export const createArtist = (artistName) => async (dispatch, getState) => {
       { name: artistName },
       config
     );
-    console.log("data", data);
-
     dispatch({
       type: ARTIST_CREATE_SUCCESS,
       payload: data,

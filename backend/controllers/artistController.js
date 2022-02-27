@@ -31,7 +31,6 @@ const deleteArtist = asyncHandler(async (req, res) => {
   }
 });
 const createArtist = asyncHandler(async (req, res) => {
-  console.log("req.body", req.body);
   const artist = new Artist({
     name: req.body.name,
     image: "/images/sample.jpg",
