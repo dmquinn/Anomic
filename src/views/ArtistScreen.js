@@ -15,7 +15,6 @@ function ArtistScreen({ match }) {
   if (!artistDetails) {
     return null;
   }
-  console.log("details", artistDetails.artist);
   return (
     <>
       {artistDetails && (

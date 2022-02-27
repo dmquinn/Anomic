@@ -12,7 +12,7 @@ const ArtistScreen = () => {
   }, [dispatch]);
   return (
     <>
-      <div className="h-5 bg-black" />
+      <div className="h-7 bg-black" />
       <div className="container">
         <div className="row mt-10">
           {artists &&

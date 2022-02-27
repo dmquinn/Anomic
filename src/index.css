@@ -4,14 +4,11 @@
   /* font-family: "Merriweather", serif !important; */
   letter-spacing: 0.5px !important;
 }
-#root {
-  min-height: 100vh;
-}
+
 section {
   background-color: #1e212b !important;
   border-bottom: 12px solid #1e212b;
 }
-
 body {
   color: rgb(17, 17, 17);
   margin: 0;
@@ -63,12 +60,9 @@ i {
   color: rgb(70, 70, 70);
 }
 i:hover {
-  color: rgba(255, 255, 255, 0.795);
+  color: rgba(168, 168, 168, 0.795);
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-.contain {
-  object-fit: cover !important;
 }
 iframe {
   position: relative !important;
@@ -104,9 +98,15 @@ iframe {
   background: linear-gradient(rgba(0, 0, 0, 0.678), transparent);
   z-index: 99;
 }
+.fullScreen {
+  min-height: 100vh;
+}
 @media (max-width: 768px) {
   iframe {
     padding: 0;
     height: 400px;
+  }
+  .artistCard {
+    height: 250px;
   }
 }

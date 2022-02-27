@@ -16,7 +16,7 @@ function AboutScreen() {
         ></div>
         <div className="j-end">
           {" "}
-          <h1 className="mt-10 mx-3">About</h1>
+          <h1 className="mt-10 mx-5 title">About</h1>
         </div>
         <div className="container">
           <div className="row justify-content-center pb-5">
